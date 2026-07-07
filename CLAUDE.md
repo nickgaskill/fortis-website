@@ -14,7 +14,7 @@ Plain static HTML/CSS/JS — no framework, no build step. Six real pages (`index
 
 ## Conventions
 
-- Brand voice: plain, direct, confident. Tagline: "Built different. Built Fortis." Kicker: "From the slab to the last coat of paint."
+- Brand voice: plain, direct, confident. Tagline: "Built different. Built Fortis." The home hero opens with the Latin meaning of the name — "for·tis — Latin adj. — strong; steadfast; built to last" (the old "From the slab to the last coat of paint" kicker is retired).
 - Business facts: phone (512) 743-9690, email Nick.Gaskill@fortistexas.com, Instagram @fortistexas. The four customer reviews are verbatim quotes — don't reword them.
 - Gallery projects use real locations/dates. Photo placeholders are `<div class="proj-ph">` blocks; replace with `<img>` tags as real photos are added (compress images to ~200-400 KB before committing).
 - `index.html` carries the JSON-LD LocalBusiness schema and each page has its own meta description — keep these updated when business details change (they matter for Google).
