@@ -4,7 +4,7 @@ This is the source code for the Fortis Home Solutions website. It's a simple sta
 
 ## The files
 
-The site has a **top menu bar with dropdowns** and **separate pages** for each section.
+The site has a **"Menu" button that opens a drop-down** (with the Services sub-items under it) and **separate pages** for each section.
 
 | File | What it is |
 |---|---|
@@ -15,9 +15,9 @@ The site has a **top menu bar with dropdowns** and **separate pages** for each s
 | `reviews.html` | Customer reviews |
 | `contact.html` | Contact info + the consultation form |
 | `styles.css` | All colors, fonts, and layout (site-wide) |
-| `site.js` | The mobile slide-out menu and scroll animations |
+| `site.js` | The Menu drop-down and scroll animations |
 
-**Important:** the menu bar, drop-down menu, and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all six `.html` files.
+**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all six `.html` files.
 
 ## How to edit the site (first-time setup)
 

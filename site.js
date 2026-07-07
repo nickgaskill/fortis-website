@@ -1,26 +1,24 @@
 (function () {
   var btn = document.getElementById('menuBtn');
-  var closeBtn = document.getElementById('menuClose');
-  var scrim = document.getElementById('scrim');
-  var drawer = document.getElementById('drawer');
+  var panel = document.getElementById('menuPanel');
+  if (!btn || !panel) return;
 
   function setOpen(open) {
-    document.body.classList.toggle('menu-open', open);
     btn.setAttribute('aria-expanded', String(open));
-    if (open) {
-      drawer.querySelector('a').focus();
-    } else {
-      btn.focus();
-    }
+    panel.hidden = !open;
   }
-  btn.addEventListener('click', function () { setOpen(true); });
-  closeBtn.addEventListener('click', function () { setOpen(false); });
-  scrim.addEventListener('click', function () { setOpen(false); });
-  drawer.addEventListener('click', function (e) {
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(panel.hidden);
+  });
+  panel.addEventListener('click', function (e) {
     if (e.target.closest('a')) setOpen(false);
   });
+  document.addEventListener('click', function (e) {
+    if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+  });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && document.body.classList.contains('menu-open')) setOpen(false);
+    if (e.key === 'Escape' && !panel.hidden) { setOpen(false); btn.focus(); }
   });
 })();
 
