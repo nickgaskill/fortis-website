@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Fortis Construction & Remodeling — locally owned general contractor serving Austin, Georgetown, and Lakeway, TX. New construction, room additions, kitchen & bathroom remodels, and outdoor living. Free consultations: (512) 743-9690.">
-<meta property="og:title" content="Fortis Construction & Remodeling — Austin, TX">
-<meta property="og:description" content="New construction, room additions, kitchen & bathroom remodels, and outdoor living across Central Texas. Locally owned. Free consultations.">
+<meta name="description" content="Built different. Built Fortis. Locally owned general contractor serving Austin, Georgetown, and Lakeway, TX. New construction, general contracting, kitchen & bathroom remodels, and outdoor living. Free consultations: (512) 743-9690.">
+<meta property="og:title" content="Fortis Construction & Remodeling — Built different. Built Fortis.">
+<meta property="og:description" content="New construction, general contracting, and full remodels across Central Texas. Locally owned. Free consultations.">
 <meta property="og:type" content="website">
 <title>Fortis Construction &amp; Remodeling — Austin, TX</title>
 <style>
@@ -20,9 +20,23 @@
     --brass-bright:#D9A63F;
     --rule:rgba(29,37,48,.16);
     --rule-dark:rgba(246,244,238,.16);
+    --header-bg:rgba(235,231,223,.92);
+    --ph-a:#2B3A46;--ph-b:#1F2A33;
     --display:'Avenir Next Condensed','HelveticaNeue-CondensedBold','Arial Narrow',Arial,sans-serif;
     --body:'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif;
     --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  }
+  body[data-theme="blackout"]{
+    --limestone:#0C0D0F;
+    --card:#15161A;
+    --iron:#17191D;
+    --iron-deep:#101114;
+    --ink:#EDEBE4;
+    --ink-soft:#A9ACB2;
+    --brass:#D9A63F;
+    --rule:rgba(237,235,228,.14);
+    --header-bg:rgba(12,13,15,.9);
+    --ph-a:#1C1E23;--ph-b:#131417;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -42,10 +56,10 @@
   h2{font-size:clamp(2.1rem,4.5vw,3.4rem);letter-spacing:.01em;margin:.9rem 0 1.1rem}
   .lede{max-width:38rem;color:var(--ink-soft)}
   .on-dark .lede{color:rgba(246,244,238,.72)}
-  section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+  section{padding:clamp(3rem,7vw,5.25rem) 0}
 
   /* ---------- header ---------- */
-  header{position:sticky;top:0;z-index:50;background:rgba(235,231,223,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+  header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
   .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem clamp(1.25rem,4vw,3rem);max-width:1180px;margin:0 auto}
   .logo{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;display:flex;align-items:baseline;gap:.5rem}
   .logo small{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--brass)}
@@ -54,10 +68,13 @@
   .nav-links a:hover,.nav-links a:focus-visible{color:var(--brass)}
   .nav-phone{font-family:var(--mono);font-size:.8rem;text-decoration:none;border:1px solid var(--ink);padding:.5rem .9rem;white-space:nowrap}
   .nav-phone:hover,.nav-phone:focus-visible{background:var(--ink);color:var(--limestone)}
+  .nav-right{display:flex;align-items:center;gap:.6rem}
+  .theme-btn{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:none;border:1px dashed var(--rule);color:var(--ink-soft);padding:.55rem .8rem;white-space:nowrap}
+  .theme-btn:hover,.theme-btn:focus-visible{color:var(--brass);border-color:var(--brass)}
   @media(max-width:760px){.nav-links{display:none}}
 
   /* ---------- hero ---------- */
-  .hero{background:var(--iron);color:var(--card);padding:clamp(4rem,9vw,7.5rem) 0 clamp(3.5rem,7vw,6rem);position:relative;overflow:hidden}
+  .hero{background:var(--iron);color:var(--card);padding:clamp(3.5rem,8vw,6.5rem) 0 clamp(3rem,6vw,4.75rem);position:relative;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;background:
     repeating-linear-gradient(90deg,rgba(246,244,238,.035) 0,rgba(246,244,238,.035) 1px,transparent 1px,transparent 120px),
     repeating-linear-gradient(0deg,rgba(246,244,238,.035) 0,rgba(246,244,238,.035) 1px,transparent 1px,transparent 120px);pointer-events:none}
@@ -73,15 +90,15 @@
   .btn-brass:hover,.btn-brass:focus-visible{background:#E8B54C}
   .btn-ghost{border:1px solid rgba(246,244,238,.4);color:var(--card)}
   .btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--brass-bright);color:var(--brass-bright)}
-  .hero-meta{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--rule-dark);display:flex;flex-wrap:wrap;gap:.6rem 2.4rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(246,244,238,.6)}
+  .hero-meta{margin-top:2.2rem;padding-top:1.2rem;border-top:1px solid var(--rule-dark);display:flex;flex-wrap:wrap;gap:.6rem 2.4rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(246,244,238,.6)}
 
   /* ---------- services ---------- */
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:2.5rem}
   @media(max-width:860px){.svc-grid{grid-template-columns:1fr}}
   .svc{background:var(--card);border:1px solid var(--rule);padding:1.75rem 1.6rem;display:flex;flex-direction:column;gap:1rem}
   .svc h3{font-size:1.45rem;letter-spacing:.03em}
   .svc .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--brass)}
-  .svc ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.35rem .9rem;font-size:.92rem;color:var(--ink-soft)}
+  .svc ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.35rem .9rem;font-size:.92rem;color:var(--ink-soft);align-content:start}
   .svc li{padding-left:1rem;position:relative}
   .svc li::before{content:"";position:absolute;left:0;top:.62em;width:.4rem;height:1px;background:var(--brass)}
   .svc .more{margin-top:auto;font-size:.85rem;color:var(--ink-soft);font-style:italic}
@@ -94,7 +111,7 @@
   .proj{border:1px solid var(--rule-dark);background:var(--iron);display:flex;flex-direction:column}
   .proj-ph{aspect-ratio:4/3;position:relative;background:
     repeating-linear-gradient(45deg,rgba(217,166,63,.10) 0,rgba(217,166,63,.10) 1px,transparent 1px,transparent 9px),
-    linear-gradient(160deg,#2B3A46,#1F2A33)}
+    linear-gradient(160deg,var(--ph-a),var(--ph-b))}
   .proj-ph span{position:absolute;left:.9rem;bottom:.7rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,244,238,.45)}
   .proj-body{padding:1.2rem 1.2rem 1.4rem;display:flex;flex-direction:column;gap:.5rem}
   .proj-spec{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-bright)}
@@ -155,7 +172,10 @@
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="nav-phone" href="tel:+15127439690">(512) 743-9690</a>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch color theme">◐ Blackout</button>
+      <a class="nav-phone" href="tel:+15127439690">(512) 743-9690</a>
+    </div>
   </nav>
 </header>
 
@@ -164,8 +184,8 @@
   <section class="hero on-dark">
     <div class="wrap">
       <p class="defn">for·tis <em>/ˈfor.tis/ — Latin adj. — strong; steadfast; built to last</em></p>
-      <h1>We build Texas homes <span class="accent">the strong way.</span></h1>
-      <p>New construction, room additions, and full kitchen, bath, and outdoor remodels — locally owned, locally operated, and built with craftsmanship rooted in local pride.</p>
+      <h1>Built different. <span class="accent">Built Fortis.</span></h1>
+      <p>New construction, general contracting, and full kitchen, bath, and outdoor remodels across Central Texas — locally owned, locally operated, and built with craftsmanship rooted in local pride.</p>
       <div class="hero-cta">
         <a class="btn btn-brass" href="#contact">Get a free consultation</a>
         <a class="btn btn-ghost" href="#projects">See our work</a>
@@ -190,6 +210,14 @@
             <li>Custom homes</li><li>Framing</li><li>Decking</li><li>Cornice</li>
           </ul>
           <p class="more">Residential and commercial builds, start to finish.</p>
+        </div>
+        <div class="svc reveal">
+          <span class="tag">General contracting</span>
+          <h3>One point of contact</h3>
+          <ul>
+            <li>Project management</li><li>Trade coordination</li><li>Scheduling &amp; budgets</li><li>Quality walkthroughs</li>
+          </ul>
+          <p class="more">We run the whole job — you deal with one contractor, not ten.</p>
         </div>
         <div class="svc reveal">
           <span class="tag">Interior</span>
@@ -381,6 +409,20 @@
 }
 </script>
 <script>
+  (function(){
+    var btn = document.getElementById('themeBtn');
+    function setTheme(t){
+      document.body.dataset.theme = t;
+      btn.textContent = t === 'blackout' ? '◐ Limestone' : '◐ Blackout';
+      try { localStorage.setItem('fortis-theme', t); } catch(e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('fortis-theme'); } catch(e) {}
+    setTheme(saved || 'blackout');
+    btn.addEventListener('click', function(){
+      setTheme(document.body.dataset.theme === 'blackout' ? 'limestone' : 'blackout');
+    });
+  })();
   (function(){
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
