@@ -27,7 +27,7 @@ This is the source code for the Fortis Home Solutions website. It's a simple sta
 ## Common edits
 
 - **Change wording:** open the page's `.html` file and edit the text between the tags.
-- **Change colors:** open `styles.css` — every color is defined once at the top under `:root` (e.g. `--forest` is the green, `--gold-bright` is the gold).
+- **Change colors:** open `styles.css` — every color is defined once at the top under `:root` (e.g. `--navy` is the deep blue, `--gold-bright` is the gold).
 - **Add a project to the gallery:** in `gallery.html`, copy an existing `<article class="proj">...</article>` block, paste it, and change the text.
 - **Add photos:** put image files in this folder, then replace a placeholder `<div class="proj-ph">...</div>` with `<img src="your-photo.jpg" alt="describe the photo">`.
 

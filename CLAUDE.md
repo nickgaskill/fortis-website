@@ -6,7 +6,7 @@ Public marketing site for Fortis Home Solutions, a construction & remodeling com
 
 Plain static HTML/CSS/JS — no framework, no build step, no dependencies. Six pages (`index`, `services`, `gallery`, `process`, `reviews`, `contact`) share:
 
-- `styles.css` — all styling. The palette and fonts are CSS variables in `:root` at the top (`--forest` green, `--gold`/`--gold-bright`, `--paper` white, `--black`). Change a color there and it changes site-wide.
+- `styles.css` — all styling. The palette and fonts are CSS variables in `:root` at the top (`--navy` deep blue, `--gold`/`--gold-bright`, `--paper` warm cream, `--black`). Change a color there and it changes site-wide.
 - `site.js` — the slide-out drawer menu and scroll-reveal animations.
 - The header, drawer menu, and footer are **copy-pasted into every page** — if you edit one (e.g. add a page link or change the phone number), make the same edit in all six HTML files.
 
