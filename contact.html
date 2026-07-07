@@ -60,25 +60,27 @@
           <!-- FORM: submissions go to Nick's Formspree form (ID mpqgewbv) and are emailed to Nick.Gaskill@fortistexas.com. -->
           <form class="lead-form reveal" action="https://formspree.io/f/mpqgewbv" method="POST">
             <input type="hidden" name="_subject" value="New consultation request — fortistexas.com">
-            <div class="field">
-              <label for="f-name">Name</label>
-              <input id="f-name" type="text" name="name" autocomplete="name" required>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" type="text" name="name" autocomplete="name" placeholder="Your name" required>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" type="tel" name="phone" autocomplete="tel" placeholder="(512) 000-0000" required>
+              </div>
             </div>
             <div class="field">
-              <label for="f-phone">Phone</label>
-              <input id="f-phone" type="tel" name="phone" autocomplete="tel" required>
-            </div>
-            <div class="field">
-              <label for="f-email">Email <span class="opt">(optional)</span></label>
-              <input id="f-email" type="email" name="email" autocomplete="email">
+              <label for="f-email">Email <span class="opt">optional</span></label>
+              <input id="f-email" type="email" name="email" autocomplete="email" placeholder="you@example.com">
             </div>
             <div class="field">
               <label for="f-address">Property address</label>
-              <input id="f-address" type="text" name="address" autocomplete="street-address" required>
+              <input id="f-address" type="text" name="address" autocomplete="street-address" placeholder="Street, city" required>
             </div>
             <div class="field">
               <label for="f-job">Brief job description</label>
-              <textarea id="f-job" name="job_description" rows="5" required placeholder="What are you planning? A new build, addition, kitchen or bath remodel, outdoor living space, etc."></textarea>
+              <textarea id="f-job" name="job_description" rows="5" required placeholder="What are you planning? A new build, addition, kitchen or bath remodel, outdoor living space…"></textarea>
             </div>
             <button class="btn btn-gold" type="submit">Send request</button>
             <p class="form-note">Prefer to talk? Call Nick directly at <a href="tel:+15127439690">(512) 743-9690</a>.</p>
