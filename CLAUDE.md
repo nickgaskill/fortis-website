@@ -4,11 +4,12 @@ Public marketing site for Fortis Home Solutions, a construction & remodeling com
 
 ## Architecture
 
-Plain static HTML/CSS/JS — no framework, no build step, no dependencies. The site is a **single scrolling page**: all content lives in `index.html` as anchored sections (`#top` hero, `#services`, `#gallery`, `#process`, `#reviews`, `#contact`). The drawer menu, the header "Contact us" button, and the footer link to these anchors and smooth-scroll to them.
+Plain static HTML/CSS/JS — no framework, no build step. Six real pages (`index`, `services`, `gallery`, `process`, `reviews`, `contact`), each a full standalone page.
 
-- `styles.css` — all styling. The palette and fonts are CSS variables in `:root` at the top (`--navy` deep blue, `--gold`/`--gold-bright`, `--paper` warm cream, `--black`). Change a color there and it changes site-wide. `section[id]{scroll-margin-top}` keeps the sticky header from covering a section heading on jump. The header wordmark uses `--wordmark` (Cinzel), loaded from Google Fonts via a `<link>` in `index.html`'s `<head>` — the only external dependency. The "Free consultation" nav button is hidden under 560px so the wordmark and Menu fit on phones.
-- `site.js` — the slide-out drawer menu (closes on link click), and scroll-reveal animations.
-- `services.html`, `gallery.html`, `process.html`, `reviews.html`, `contact.html` are **redirect stubs** — each forwards to the matching `index.html#section` (so old bookmarked URLs still work). Don't add content to them; edit the section in `index.html` instead.
+- **Navigation** (modeled loosely on alliedoutdoorsolutions.com): a sticky top menu bar with a **Services dropdown** (New Construction / General Contracting / Interior / Exterior → anchors on `services.html`), plus Gallery, Process, Reviews, Contact, the phone number, and a "Free consultation" button. The dropdown opens on `:hover`/`:focus-within` (CSS only — no JS). Under 900px the top bar is hidden and a hamburger opens the **slide-out drawer** (which lists the same links, with the Services sub-items shown under it via `.drawer-sub`).
+- The **header, drawer, and footer are copy-pasted into all six pages** — if you edit one (add a page link, change the phone number), make the same edit in every HTML file. The `aria-current="page"` marker is set on the current page's nav links.
+- `styles.css` — all styling. The palette and fonts are CSS variables in `:root` at the top (`--navy` deep blue, `--gold`/`--gold-bright`, `--paper` warm cream, `--black`). Change a color there and it changes site-wide. The wordmark uses `--wordmark` (Cinzel), loaded from Google Fonts via a `<link>` in each page's `<head>` — the only external dependency. `section[id],[id].svc{scroll-margin-top}` keeps the sticky header from covering a heading when the Services dropdown jumps to an anchor.
+- `site.js` — the slide-out drawer menu (closes on link click) and scroll-reveal animations.
 - The contact form posts to Formspree (`https://formspree.io/f/mpqgewbv`) and emails submissions to Nick.Gaskill@fortistexas.com.
 
 ## Conventions

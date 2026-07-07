@@ -17,11 +17,29 @@
 
 <header>
   <nav class="nav" aria-label="Main">
-    <a class="logo" href="#top">Fortis Home Solutions</a>
-    <div class="nav-right">
-      <a class="nav-contact" href="#contact">Free consultation</a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="drawer"><span class="bars"><i></i><i></i><i></i></span>Menu</button>
+    <a class="logo" href="index.html">Fortis Home Solutions</a>
+    <div class="nav-desktop">
+      <ul class="nav-links">
+        <li class="has-dropdown">
+          <a href="services.html">Services <span class="caret" aria-hidden="true">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="services.html#new-construction">New Construction</a></li>
+            <li><a href="services.html#general-contracting">General Contracting</a></li>
+            <li><a href="services.html#interior">Interior Remodels</a></li>
+            <li><a href="services.html#exterior">Exterior &amp; Outdoor Living</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="nav-phone" href="tel:+15127439690">(512) 743-9690</a>
+        <a class="nav-contact" href="contact.html">Free consultation</a>
+      </div>
     </div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="drawer"><span class="bars"><i></i><i></i><i></i></span>Menu</button>
   </nav>
 </header>
 <div class="scrim" id="scrim"></div>
@@ -30,14 +48,21 @@
     <p class="drawer-tag">Fortis Home Solutions</p>
     <button class="drawer-close" id="menuClose" type="button">Close ✕</button>
   </div>
-  <nav aria-label="Sections">
+  <nav aria-label="Pages">
     <ul>
-      <li><a href="#top">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="services.html">Services</a>
+        <ul class="drawer-sub">
+          <li><a href="services.html#new-construction">New Construction</a></li>
+          <li><a href="services.html#general-contracting">General Contracting</a></li>
+          <li><a href="services.html#interior">Interior Remodels</a></li>
+          <li><a href="services.html#exterior">Exterior &amp; Outdoor Living</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
   <div class="drawer-foot">
@@ -49,14 +74,14 @@
 
 <main>
   <!-- HERO -->
-  <section class="hero on-dark" id="top">
+  <section class="hero on-dark">
     <div class="wrap">
       <p class="kicker">From the slab to the last coat of paint</p>
       <h1>Built different. <span class="accent">Built Fortis.</span></h1>
       <p class="sub">Fortis Home Solutions is a locally owned and operated construction company serving Central Texas. New builds, additions, kitchens, baths, and outdoor living — done right the first time and built to last.</p>
       <div class="hero-cta">
-        <a class="btn btn-gold" href="#contact">Get a free consultation</a>
-        <a class="btn btn-ghost" href="#gallery">See our work</a>
+        <a class="btn btn-gold" href="contact.html">Get a free consultation</a>
+        <a class="btn btn-ghost" href="gallery.html">See our work</a>
       </div>
       <div class="hero-meta">
         <span>Austin</span><span>&amp; surrounding areas</span>
@@ -64,8 +89,8 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services">
+  <!-- SERVICES TEASER -->
+  <section>
     <div class="wrap">
       <p class="eyebrow">What we do</p>
       <h2>Construction expertise &amp; capabilities</h2>
@@ -74,49 +99,34 @@
         <div class="svc reveal">
           <span class="tag">New construction &amp; commercial</span>
           <h3>Built from the ground up</h3>
-          <ul>
-            <li>Custom homes</li><li>Framing</li><li>Decking</li><li>Cornice</li>
-          </ul>
-          <p class="more">Residential and commercial builds, start to finish.</p>
+          <ul><li>Custom homes</li><li>Framing</li><li>Decking</li><li>Cornice</li></ul>
         </div>
         <div class="svc reveal">
           <span class="tag">General contracting</span>
           <h3>One point of contact</h3>
-          <ul>
-            <li>Project management</li><li>Trade coordination</li><li>Scheduling &amp; budgets</li><li>Quality walkthroughs</li>
-          </ul>
-          <p class="more">We run the whole job — you deal with one contractor, not ten.</p>
+          <ul><li>Project management</li><li>Trade coordination</li><li>Scheduling &amp; budgets</li><li>Quality walkthroughs</li></ul>
         </div>
         <div class="svc reveal">
           <span class="tag">Interior</span>
           <h3>Inside your home</h3>
-          <ul>
-            <li>Kitchen remodels</li><li>Bathroom remodels</li><li>Room additions</li><li>Flooring</li>
-            <li>Cabinetry</li><li>Countertops</li><li>Painting</li><li>Sheetrock &amp; repair</li>
-            <li>Electric repair</li><li>Millwork</li><li>Beam wrapping</li><li>Restoration</li>
-          </ul>
-          <p class="more">…insulation, and so much more.</p>
+          <ul><li>Kitchen remodels</li><li>Bathroom remodels</li><li>Room additions</li><li>Flooring &amp; cabinetry</li></ul>
         </div>
         <div class="svc reveal">
           <span class="tag">Exterior</span>
           <h3>Outside &amp; outdoor living</h3>
-          <ul>
-            <li>Outdoor kitchens</li><li>Outdoor fireplaces</li><li>Pergolas</li><li>Decks</li>
-            <li>Casitas</li><li>Detached additions</li><li>Siding replacement</li><li>Masonry &amp; brick</li>
-            <li>Roofing</li><li>Windows &amp; doors</li><li>Concrete</li><li>Exterior paint</li>
-          </ul>
-          <p class="more">…tongue &amp; groove, and so much more.</p>
+          <ul><li>Outdoor kitchens</li><li>Pergolas &amp; decks</li><li>Casitas</li><li>Roofing &amp; siding</li></ul>
         </div>
       </div>
+      <a class="section-link" href="services.html">See all services →</a>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section class="dark-band on-dark" id="gallery">
+  <!-- GALLERY TEASER -->
+  <section class="dark-band on-dark">
     <div class="wrap">
       <p class="eyebrow">Gallery</p>
       <h2>Built by Fortis</h2>
-      <p class="lede">Recent jobs across Central Texas — additions, remodels, and outdoor living, from the slab to the last coat of paint.</p>
+      <p class="lede">Recent jobs across Central Texas.</p>
       <div class="proj-grid">
         <article class="proj reveal">
           <div class="proj-ph"><span>Photo — outdoor kitchen</span></div>
@@ -135,22 +145,6 @@
           </div>
         </article>
         <article class="proj reveal">
-          <div class="proj-ph"><span>Photo — bathroom</span></div>
-          <div class="proj-body">
-            <p class="proj-spec"><span>Austin, TX</span><span>Feb 2024</span></p>
-            <h3>Full bathroom remodel</h3>
-            <p>Complete gut-and-rebuild bathroom renovation.</p>
-          </div>
-        </article>
-        <article class="proj reveal">
-          <div class="proj-ph"><span>Photo — kitchen</span></div>
-          <div class="proj-body">
-            <p class="proj-spec"><span>Georgetown, TX</span><span>May 2024</span></p>
-            <h3>Kitchen remodel</h3>
-            <p>Kitchen remodel with custom features all around.</p>
-          </div>
-        </article>
-        <article class="proj reveal">
           <div class="proj-ph"><span>Photo — second-story deck</span></div>
           <div class="proj-body">
             <p class="proj-spec"><span>Austin, TX</span><span>Sep 2024</span></p>
@@ -158,57 +152,17 @@
             <p>Room extension with a brand-new second-story deck.</p>
           </div>
         </article>
-        <article class="proj reveal">
-          <div class="proj-ph"><span>Photo — interior finishing</span></div>
-          <div class="proj-body">
-            <p class="proj-spec"><span>Lakeway, TX</span><span>Oct 2024</span></p>
-            <h3>Beam wrap &amp; fireplace</h3>
-            <p>Beam wrapping, new flooring, and a custom electric fireplace build.</p>
-          </div>
-        </article>
       </div>
+      <a class="section-link" href="gallery.html">View the full gallery →</a>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="wrap">
-      <p class="eyebrow">How it works</p>
-      <h2>Four steps, no surprises</h2>
-      <p class="lede">Consultations are free and easy — we come to you, listen first, and put everything in writing before a hammer swings.</p>
-      <div class="steps">
-        <div class="step reveal">
-          <h3>Discuss</h3>
-          <p>We sit down with you to hear your vision, goals, and budget — no pressure, just a conversation about what you want to build.</p>
-        </div>
-        <div class="step reveal">
-          <h3>Prepare</h3>
-          <p>We measure the space, finalize your materials and design, and hand you a detailed, line-item estimate — no vague numbers.</p>
-        </div>
-        <div class="step reveal">
-          <h3>Build</h3>
-          <p>Our crew gets to work, keeping you informed at every stage right through the final walkthrough.</p>
-        </div>
-        <div class="step reveal">
-          <h3>Live</h3>
-          <p>Move in and enjoy the finished space — built right the first time, and built to last.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="dark-band on-dark" id="reviews">
+  <!-- REVIEWS TEASER -->
+  <section>
     <div class="wrap">
       <p class="eyebrow">Reviews</p>
       <h2>Word travels in Texas</h2>
-      <p class="lede">Real reviews from real jobs across Central Texas.</p>
       <div class="rev-grid">
-        <figure class="rev reveal">
-          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-          <blockquote>I recently had a home extension done by Fortis Construction and couldn't be happier!</blockquote>
-          <figcaption><b>Rob G.</b> — Home extension · Oct 2024</figcaption>
-        </figure>
         <figure class="rev reveal">
           <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
           <blockquote>Fortis Construction transformed our outdated kitchen into a stunning, modern space.</blockquote>
@@ -216,65 +170,11 @@
         </figure>
         <figure class="rev reveal">
           <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-          <blockquote>I hired Fortis Construction for a bathroom remodel, and the results exceeded my expectations!</blockquote>
-          <figcaption><b>Karly K.</b> — Bathroom remodel · Aug 2023</figcaption>
-        </figure>
-        <figure class="rev reveal">
-          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-          <blockquote>Working with Fortis Construction was the best decision we made for our interior remodel.</blockquote>
-          <figcaption><b>Ashlie K.</b> — Interior remodel · May 2024</figcaption>
+          <blockquote>I recently had a home extension done by Fortis Construction and couldn't be happier!</blockquote>
+          <figcaption><b>Rob G.</b> — Home extension · Oct 2024</figcaption>
         </figure>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="wrap">
-      <p class="eyebrow">Request a consultation</p>
-      <h2>Tell us about your project</h2>
-      <p class="lede">Fill out the form and we'll get back to you personally to set up a free, no-pressure visit. Prefer to talk now? Call anytime — the number's on the right.</p>
-      <div class="contact-grid">
-        <div>
-          <!-- FORM: submissions go to Nick's Formspree form (ID mpqgewbv) and are emailed to Nick.Gaskill@fortistexas.com. -->
-          <form class="lead-form reveal" action="https://formspree.io/f/mpqgewbv" method="POST">
-            <input type="hidden" name="_subject" value="New consultation request — fortistexas.com">
-            <div class="form-row">
-              <div class="field">
-                <label for="f-name">Name</label>
-                <input id="f-name" type="text" name="name" autocomplete="name" placeholder="Your name" required>
-              </div>
-              <div class="field">
-                <label for="f-phone">Phone</label>
-                <input id="f-phone" type="tel" name="phone" autocomplete="tel" placeholder="(512) 000-0000" required>
-              </div>
-            </div>
-            <div class="field">
-              <label for="f-email">Email <span class="opt">optional</span></label>
-              <input id="f-email" type="email" name="email" autocomplete="email" placeholder="you@example.com">
-            </div>
-            <div class="field">
-              <label for="f-address">Property address</label>
-              <input id="f-address" type="text" name="address" autocomplete="street-address" placeholder="Street, city" required>
-            </div>
-            <div class="field">
-              <label for="f-job">Brief job description</label>
-              <textarea id="f-job" name="job_description" rows="5" required placeholder="What are you planning? A new build, addition, kitchen or bath remodel, outdoor living space…"></textarea>
-            </div>
-            <button class="btn btn-gold" type="submit">Send request</button>
-            <p class="form-note">Prefer to talk? Call Fortis directly at <a href="tel:+15127439690">(512) 743-9690</a>.</p>
-          </form>
-        </div>
-        <div class="c-card on-dark reveal">
-          <h3>Fortis Home Solutions</h3>
-          <p>Locally owned. Locally operated. Serving Austin and the surrounding areas.</p>
-          <ul class="c-list">
-            <li><span class="lbl">Call or text</span><a href="tel:+15127439690">(512) 743-9690</a></li>
-            <li><span class="lbl">Email</span><a href="mailto:Nick.Gaskill@fortistexas.com">Nick.Gaskill@fortistexas.com</a></li>
-            <li><span class="lbl">Instagram</span><a href="https://www.instagram.com/fortistexas" rel="noopener">@fortistexas</a></li>
-          </ul>
-        </div>
-      </div>
+      <a class="section-link" href="reviews.html">Read all reviews →</a>
     </div>
   </section>
 
@@ -285,7 +185,7 @@
         <h2>Ready to build?</h2>
         <p>Consultations are always free — call or send a message today.</p>
       </div>
-      <a class="btn btn-gold" href="#contact">Get a free consultation</a>
+      <a class="btn btn-gold" href="contact.html">Get a free consultation</a>
     </div>
   </section>
 </main>
@@ -297,13 +197,13 @@
       <p class="foot-defn">for·tis — Latin adj. — strong; steadfast; built to last</p>
     </div>
     <div>
-      <h4>Sections</h4>
+      <h4>Pages</h4>
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div>

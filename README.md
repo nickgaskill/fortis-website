@@ -4,14 +4,20 @@ This is the source code for the Fortis Home Solutions website. It's a simple sta
 
 ## The files
 
-The whole site is now **one scrolling page**. Everything lives in `index.html` as sections you scroll through (hero, services, gallery, process, reviews, contact). The menu and footer links jump down to each section instead of loading a new page.
+The site has a **top menu bar with dropdowns** and **separate pages** for each section.
 
 | File | What it is |
 |---|---|
-| `index.html` | **The entire website** — all sections on one scrolling page |
+| `index.html` | Home page (hero + previews of each section) |
+| `services.html` | Full services list (the Services dropdown jumps to sections here) |
+| `gallery.html` | Project gallery |
+| `process.html` | The Discuss / Prepare / Build / Live process |
+| `reviews.html` | Customer reviews |
+| `contact.html` | Contact info + the consultation form |
 | `styles.css` | All colors, fonts, and layout (site-wide) |
-| `site.js` | The slide-out menu and scroll animations |
-| `services.html`, `gallery.html`, `process.html`, `reviews.html`, `contact.html` | Old page addresses kept as automatic redirects to the matching section — don't edit these; they just forward visitors to the right spot on `index.html` |
+| `site.js` | The mobile slide-out menu and scroll animations |
+
+**Important:** the menu bar, drop-down menu, and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all six `.html` files.
 
 ## How to edit the site (first-time setup)
 
@@ -24,9 +30,10 @@ The whole site is now **one scrolling page**. Everything lives in `index.html` a
 
 ## Common edits
 
-- **Change wording:** open `index.html`, scroll to the section you want, and edit the text between the tags.
+- **Change wording:** open the page's `.html` file (e.g. `services.html`) and edit the text between the tags.
 - **Change colors:** open `styles.css` — every color is defined once at the top under `:root` (e.g. `--navy` is the deep blue, `--gold-bright` is the gold).
-- **Add a project to the gallery:** in `index.html`, find the `#gallery` section, copy an existing `<article class="proj">...</article>` block, paste it, and change the text.
+- **Add a project to the gallery:** in `gallery.html`, copy an existing `<article class="proj">...</article>` block, paste it, and change the text.
+- **Add or rename a menu item:** edit the menu bar, the drop-down, and the footer in **all six** `.html` files so every page matches.
 - **Add photos:** put image files in this folder, then replace a placeholder `<div class="proj-ph">...</div>` with `<img src="your-photo.jpg" alt="describe the photo">`.
 
 ## Hosting
