@@ -43,13 +43,13 @@ header{position:sticky;top:0;z-index:50;background:rgba(250,250,248,.94);backdro
 .logo{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;display:flex;align-items:baseline;gap:.5rem;color:var(--forest)}
 .logo small{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--gold)}
 .nav-right{display:flex;align-items:center;gap:.6rem}
-.nav-phone{font-family:var(--mono);font-size:.8rem;text-decoration:none;border:1px solid var(--black);padding:.5rem .9rem;white-space:nowrap;color:var(--ink)}
-.nav-phone:hover,.nav-phone:focus-visible{background:var(--black);color:var(--paper)}
+.nav-contact{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--forest);padding:.55rem 1rem;white-space:nowrap;color:var(--forest)}
+.nav-contact:hover,.nav-contact:focus-visible{background:var(--forest);color:var(--paper)}
 .menu-btn{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;background:var(--forest);border:1px solid var(--forest);color:var(--paper);padding:.55rem 1rem;display:flex;align-items:center;gap:.55rem}
 .menu-btn:hover,.menu-btn:focus-visible{background:var(--forest-deep)}
 .menu-btn .bars{display:inline-flex;flex-direction:column;gap:3px}
 .menu-btn .bars i{width:16px;height:2px;background:var(--gold-bright)}
-@media(max-width:560px){.nav-phone{display:none}}
+@media(max-width:400px){.nav-contact{padding:.55rem .7rem}.logo small{display:none}}
 
 /* ---------- drawer menu ---------- */
 .scrim{position:fixed;inset:0;background:rgba(10,14,10,.55);z-index:90;opacity:0;pointer-events:none;transition:opacity .3s ease}
@@ -145,6 +145,16 @@ figure.rev{background:var(--card);border:1px solid var(--rule);border-left:3px s
 .c-card{background:var(--forest);border:1px solid var(--rule-dark);padding:1.8rem;color:var(--paper)}
 .c-card h3{font-size:1.4rem;letter-spacing:.03em;margin-bottom:.6rem;color:var(--paper)}
 .c-card p{font-size:.95rem;color:rgba(250,250,248,.75);margin-bottom:1.4rem}
+.lead-form{display:flex;flex-direction:column;gap:1.1rem;margin-top:2rem}
+.lead-form .field{display:flex;flex-direction:column;gap:.4rem}
+.lead-form label{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.lead-form label .opt{color:var(--ink-soft);letter-spacing:.02em;text-transform:none}
+.lead-form input,.lead-form textarea{font-family:var(--body);font-size:1rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:0;padding:.75rem .85rem;width:100%}
+.lead-form input:focus,.lead-form textarea:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(28,58,42,.12)}
+.lead-form textarea{resize:vertical;line-height:1.5}
+.lead-form .btn{align-self:flex-start;border:none;cursor:pointer;margin-top:.3rem}
+.form-note{font-size:.9rem;color:var(--ink-soft)}
+.form-note a{color:var(--forest);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold)}
 
 /* ---------- CTA band ---------- */
 .cta-band{background:var(--forest);color:var(--paper);text-align:left}
