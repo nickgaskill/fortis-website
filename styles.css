@@ -34,6 +34,12 @@ h2{font-size:clamp(2.1rem,4.5vw,3.4rem);letter-spacing:.01em;margin:.9rem 0 1.1r
 .on-dark .lede{color:rgba(250,250,248,.75)}
 section{padding:clamp(3rem,7vw,5.25rem) 0}
 section[id],[id].svc{scroll-margin-top:92px}
+.defn-band{padding:clamp(2.25rem,5vw,3.25rem) 0;text-align:center;border-bottom:1px solid var(--rule)}
+.defn{max-width:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.55rem .7rem;color:var(--ink-soft)}
+.defn-word{font-family:var(--wordmark);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:clamp(1.25rem,3vw,1.5rem);color:var(--navy)}
+.defn-gram{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.defn-dash{color:var(--rule)}
+.defn-mean{font-style:italic;font-size:1.05rem;color:var(--ink)}
 .section-link{display:inline-block;margin-top:2rem;font-family:var(--mono);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:.2rem}
 .section-link:hover,.section-link:focus-visible{color:var(--ink);border-color:var(--ink)}
 .on-dark .section-link{color:var(--gold-bright);border-color:var(--gold-bright)}
