@@ -16,6 +16,9 @@
   btn.addEventListener('click', function () { setOpen(true); });
   closeBtn.addEventListener('click', function () { setOpen(false); });
   scrim.addEventListener('click', function () { setOpen(false); });
+  drawer.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setOpen(false);
+  });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && document.body.classList.contains('menu-open')) setOpen(false);
   });

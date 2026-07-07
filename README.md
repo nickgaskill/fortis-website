@@ -4,16 +4,14 @@ This is the source code for the Fortis Home Solutions website. It's a simple sta
 
 ## The files
 
+The whole site is now **one scrolling page**. Everything lives in `index.html` as sections you scroll through (hero, services, gallery, process, reviews, contact). The menu and footer links jump down to each section instead of loading a new page.
+
 | File | What it is |
 |---|---|
-| `index.html` | Home page (hero, service preview, gallery preview, reviews preview) |
-| `services.html` | Full services list |
-| `gallery.html` | Project gallery |
-| `process.html` | The 4-step process |
-| `reviews.html` | Customer reviews |
-| `contact.html` | Contact info |
+| `index.html` | **The entire website** — all sections on one scrolling page |
 | `styles.css` | All colors, fonts, and layout (site-wide) |
 | `site.js` | The slide-out menu and scroll animations |
+| `services.html`, `gallery.html`, `process.html`, `reviews.html`, `contact.html` | Old page addresses kept as automatic redirects to the matching section — don't edit these; they just forward visitors to the right spot on `index.html` |
 
 ## How to edit the site (first-time setup)
 
@@ -26,9 +24,9 @@ This is the source code for the Fortis Home Solutions website. It's a simple sta
 
 ## Common edits
 
-- **Change wording:** open the page's `.html` file and edit the text between the tags.
+- **Change wording:** open `index.html`, scroll to the section you want, and edit the text between the tags.
 - **Change colors:** open `styles.css` — every color is defined once at the top under `:root` (e.g. `--navy` is the deep blue, `--gold-bright` is the gold).
-- **Add a project to the gallery:** in `gallery.html`, copy an existing `<article class="proj">...</article>` block, paste it, and change the text.
+- **Add a project to the gallery:** in `index.html`, find the `#gallery` section, copy an existing `<article class="proj">...</article>` block, paste it, and change the text.
 - **Add photos:** put image files in this folder, then replace a placeholder `<div class="proj-ph">...</div>` with `<img src="your-photo.jpg" alt="describe the photo">`.
 
 ## Hosting
