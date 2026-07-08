@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -47,6 +47,39 @@
       <p class="kicker">Gallery</p>
       <h1>Built by Fortis</h1>
       <p class="lede">Recent jobs across Central Texas — additions, remodels, and outdoor living, from the slab to the last coat of paint.</p>
+    </div>
+  </section>
+
+  <!-- BEFORE & AFTER -->
+  <section id="before-after">
+    <div class="wrap">
+      <p class="eyebrow">Before &amp; after</p>
+      <h2>Drag to see the difference</h2>
+      <p class="lede">Grab the handle and slide across a project to reveal the transformation.</p>
+      <div class="ba-grid">
+        <figure class="ba-item reveal">
+          <div class="ba" style="--pos:50%">
+            <div class="ba-img ba-after"><div class="ba-ph ba-ph-after"><span>After — photo</span></div></div>
+            <div class="ba-img ba-before"><div class="ba-ph ba-ph-before"><span>Before — photo</span></div></div>
+            <div class="ba-divider" aria-hidden="true"><span class="ba-knob"></span></div>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Reveal before or after — kitchen remodel">
+            <span class="ba-label ba-label-before">Before</span>
+            <span class="ba-label ba-label-after">After</span>
+          </div>
+          <figcaption>Kitchen remodel · Georgetown, TX</figcaption>
+        </figure>
+        <figure class="ba-item reveal">
+          <div class="ba" style="--pos:50%">
+            <div class="ba-img ba-after"><div class="ba-ph ba-ph-after"><span>After — photo</span></div></div>
+            <div class="ba-img ba-before"><div class="ba-ph ba-ph-before"><span>Before — photo</span></div></div>
+            <div class="ba-divider" aria-hidden="true"><span class="ba-knob"></span></div>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Reveal before or after — bathroom remodel">
+            <span class="ba-label ba-label-before">Before</span>
+            <span class="ba-label ba-label-after">After</span>
+          </div>
+          <figcaption>Bathroom remodel · Austin, TX</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -146,6 +179,6 @@
     <span>Austin &amp; surrounding areas, TX</span>
   </div>
 </footer>
-<script src="site.js?v=4"></script>
+<script src="site.js?v=5"></script>
 </body>
 </html>

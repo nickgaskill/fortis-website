@@ -52,3 +52,14 @@
   document.addEventListener('touchstart', play, { once: true });
   document.addEventListener('click', play, { once: true });
 })();
+
+/* Before & after comparison sliders */
+(function () {
+  document.querySelectorAll('.ba').forEach(function (ba) {
+    var range = ba.querySelector('.ba-range');
+    if (!range) return;
+    function update() { ba.style.setProperty('--pos', range.value + '%'); }
+    range.addEventListener('input', update);
+    update();
+  });
+})();
