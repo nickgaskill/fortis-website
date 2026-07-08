@@ -34,3 +34,21 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 })();
+
+/* Force the hero background video to autoplay (muted) across browsers */
+(function () {
+  var v = document.querySelector('.hero-video');
+  if (!v) return;
+  v.muted = true;
+  v.defaultMuted = true;
+  v.setAttribute('muted', '');
+  function play() {
+    var p = v.play();
+    if (p && typeof p.catch === 'function') { p.catch(function () {}); }
+  }
+  play();
+  v.addEventListener('canplay', play, { once: true });
+  v.addEventListener('loadeddata', play, { once: true });
+  document.addEventListener('touchstart', play, { once: true });
+  document.addEventListener('click', play, { once: true });
+})();
