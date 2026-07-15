@@ -1,6 +1,6 @@
-# Fortis Home Solutions — Website
+# Fortis Contracting Group — Website
 
-This is the source code for the Fortis Home Solutions website. It's a simple static site — no frameworks, no build step. Edit the files, push, and the live site updates automatically.
+This is the source code for the Fortis Contracting Group website. It's a simple static site — no frameworks, no build step. Edit the files, push, and the live site updates automatically.
 
 ## The files
 
