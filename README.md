@@ -18,7 +18,7 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `sunrooms.html`, `home-additions.html`, `casitas.html`, `patio-extensions.html`, `adus.html` | The five Home Additions sub-pages (opened by the tiles) |
 | `new-construction.html` | New Construction — two clickable tiles |
 | `residential-construction.html`, `commercial-construction.html` | The two New Construction sub-pages (opened by the tiles) |
-| `gallery.html` | Project gallery |
+| `portfolio.html` | Project portfolio (incl. before/after sliders) |
 | `process.html` | The Discuss / Prepare / Build / Live process |
 | `reviews.html` | Customer reviews |
 | `contact.html` | Contact info + the consultation form |
@@ -40,7 +40,7 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 
 - **Change wording:** open the page's `.html` file (e.g. `services.html`) and edit the text between the tags.
 - **Change colors:** open `styles.css` — every color is defined once at the top under `:root` (e.g. `--navy` is the deep blue, `--gold-bright` is the gold).
-- **Add a project to the gallery:** in `gallery.html`, copy an existing `<article class="proj">...</article>` block, paste it, and change the text.
+- **Add a project to the gallery:** in `portfolio.html`, copy an existing `<article class="proj">...</article>` block, paste it, and change the text.
 - **Add or rename a menu item:** edit the menu bar, the drop-down, and the footer in **all six** `.html` files so every page matches.
 - **Add photos:** put image files in this folder, then replace a placeholder `<div class="proj-ph">...</div>` with `<img src="your-photo.jpg" alt="describe the photo">`.
 
