@@ -10,7 +10,8 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 |---|---|
 | `index.html` | Home page (hero + previews of each section) |
 | `services.html` | Services overview — three cards linking to the category pages below |
-| `interior-remodels.html` | Interior Remodels category page |
+| `interior-remodels.html` | Interior Remodels — a grid of clickable photo tiles |
+| `kitchen-remodels.html`, `bathroom-remodels.html`, `custom-cabinetry.html`, `painting.html`, `flooring.html`, `whole-home-renovations.html` | The six Interior Remodels sub-pages (opened by the tiles) |
 | `exterior-living.html` | Exterior Living — a grid of clickable photo tiles |
 | `landscape-design.html`, `landscaping.html`, `hardscaping.html`, `pools.html`, `outdoor-living-spaces.html`, `sport-courts.html` | The six Exterior Living sub-pages (opened by the tiles) |
 | `home-additions-sunrooms.html` | Home Additions & Sunrooms category page |
@@ -23,7 +24,7 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `styles.css` | All colors, fonts, and layout (site-wide) |
 | `site.js` | The Menu drop-down and scroll animations |
 
-**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all seventeen `.html` files.
+**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all twenty-three `.html` files.
 
 ## How to edit the site (first-time setup)
 
