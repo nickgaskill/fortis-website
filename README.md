@@ -12,6 +12,7 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `services.html` | Services overview — three cards linking to the category pages below |
 | `interior-remodels.html` | Interior Remodels category page |
 | `exterior-living.html` | Exterior Living category page |
+| `home-additions-sunrooms.html` | Home Additions & Sunrooms category page |
 | `new-construction.html` | New Construction category page |
 | `gallery.html` | Project gallery |
 | `process.html` | The Discuss / Prepare / Build / Live process |
@@ -20,7 +21,7 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `styles.css` | All colors, fonts, and layout (site-wide) |
 | `site.js` | The Menu drop-down and scroll animations |
 
-**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all nine `.html` files.
+**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all ten `.html` files.
 
 ## How to edit the site (first-time setup)
 
