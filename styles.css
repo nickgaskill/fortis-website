@@ -244,6 +244,10 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
 .pf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2.5rem}
 @media(max-width:900px){.pf-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.pf-grid{grid-template-columns:1fr}}
+.pf-intro{text-align:center;max-width:52rem;margin:0 auto}
+.pf-intro .eyebrow{justify-content:center}
+.pf-intro .eyebrow::after{display:none}
+.pf-intro .lede{max-width:46rem;margin-left:auto;margin-right:auto}
 .pf-grid-4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:900px){.pf-grid-4{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.pf-grid-4{grid-template-columns:1fr}}
