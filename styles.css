@@ -119,6 +119,18 @@ header{position:sticky;top:0;z-index:50;background:rgba(250,250,248,.94);backdro
 .svc li{padding-left:1rem;position:relative}
 .svc li::before{content:"";position:absolute;left:0;top:.62em;width:.4rem;height:1px;background:var(--gold)}
 .svc .more{margin-top:auto;font-size:.85rem;color:var(--ink-soft);font-style:italic}
+.svc h3 a{text-decoration:none;color:inherit}
+.svc h3 a:hover,.svc h3 a:focus-visible{color:var(--gold)}
+.svc-link{margin-top:auto;align-self:flex-start;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:.2rem}
+.svc-link:hover,.svc-link:focus-visible{color:var(--ink);border-color:var(--ink)}
+
+/* ---------- category pages ---------- */
+.cat-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem 1.5rem;margin-top:2rem;font-size:1rem;color:var(--ink-soft)}
+@media(max-width:760px){.cat-list{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.cat-list{grid-template-columns:1fr}}
+.cat-list li{padding-left:1.1rem;position:relative}
+.cat-list li::before{content:"";position:absolute;left:0;top:.72em;width:.5rem;height:1px;background:var(--gold)}
+.cat-note{margin-top:1.6rem;font-style:italic;color:var(--ink-soft);font-size:.95rem}
 
 /* ---------- projects / gallery ---------- */
 .dark-band{background:var(--navy-deep);color:var(--paper)}
