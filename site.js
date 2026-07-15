@@ -53,6 +53,30 @@
   document.addEventListener('click', play, { once: true });
 })();
 
+/* Process journey: light up each step as it scrolls into view */
+(function () {
+  var steps = document.querySelectorAll('.pjour-step');
+  if (!steps.length) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    steps.forEach(function (s) { s.classList.add('on'); });
+    return;
+  }
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = window.innerHeight * 0.62;
+    steps.forEach(function (s) {
+      s.classList.toggle('on', s.getBoundingClientRect().top < line);
+    });
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }
+  update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+})();
+
 /* Before & after comparison sliders */
 (function () {
   document.querySelectorAll('.ba').forEach(function (ba) {
