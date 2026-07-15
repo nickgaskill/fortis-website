@@ -132,6 +132,21 @@ header{position:sticky;top:0;z-index:50;background:rgba(250,250,248,.94);backdro
 .cat-list li::before{content:"";position:absolute;left:0;top:.72em;width:.5rem;height:1px;background:var(--gold)}
 .cat-note{margin-top:1.6rem;font-style:italic;color:var(--ink-soft);font-size:.95rem}
 
+/* ---------- service tiles ---------- */
+.tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:2.5rem}
+@media(max-width:900px){.tile-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.tile-grid{grid-template-columns:1fr}}
+.tile{position:relative;aspect-ratio:4/3;overflow:hidden;margin:0}
+.tile img,.tile-ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .5s ease}
+.tile-ph{background:repeating-linear-gradient(45deg,rgba(214,166,60,.10) 0,rgba(214,166,60,.10) 1px,transparent 1px,transparent 10px),linear-gradient(160deg,#274063,#141F38)}
+.tile::after{content:"";position:absolute;inset:0;z-index:1;background:rgba(9,14,25,.45);transition:background .3s ease}
+.tile:hover img,.tile:hover .tile-ph{transform:scale(1.05)}
+.tile:hover::after{background:rgba(9,14,25,.28)}
+.tile-corner{position:absolute;top:1.1rem;left:1.1rem;width:26px;height:26px;border-top:2px solid #fff;border-left:2px solid #fff;z-index:2}
+.tile-label{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;padding:0 1rem;text-align:center;color:#fff;font-weight:500;font-size:clamp(1.15rem,2.2vw,1.6rem);text-shadow:0 2px 12px rgba(5,9,16,.5)}
+.tile-wide{grid-column:1/-1;aspect-ratio:16/5}
+@media(max-width:560px){.tile-wide{grid-column:auto;aspect-ratio:4/3}}
+
 /* ---------- projects / gallery ---------- */
 .dark-band{background:var(--navy-deep);color:var(--paper)}
 .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
