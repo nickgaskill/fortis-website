@@ -53,21 +53,31 @@
   document.addEventListener('click', play, { once: true });
 })();
 
-/* Process journey: light up each step as it scrolls into view */
+/* Process journey: light up each step as it scrolls into view,
+   cross-fading the matching photo in the sticky frame */
 (function () {
   var steps = document.querySelectorAll('.pjour-step');
   if (!steps.length) return;
+  var imgs = document.querySelectorAll('.pjour-img');
+  function showImg(i) {
+    imgs.forEach(function (im, k) { im.classList.toggle('show', k === i); });
+  }
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
     steps.forEach(function (s) { s.classList.add('on'); });
+    showImg(0);
     return;
   }
   var ticking = false;
   function update() {
     ticking = false;
     var line = window.innerHeight * 0.62;
-    steps.forEach(function (s) {
-      s.classList.toggle('on', s.getBoundingClientRect().top < line);
+    var current = 0;
+    steps.forEach(function (s, i) {
+      var on = s.getBoundingClientRect().top < line;
+      s.classList.toggle('on', on);
+      if (on) current = i;
     });
+    if (imgs.length) showImg(Math.min(current, imgs.length - 1));
   }
   function onScroll() {
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
