@@ -18,7 +18,6 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `sunrooms.html`, `home-additions.html`, `casitas.html`, `patio-extensions.html`, `adus.html` | The five Home Additions sub-pages (opened by the tiles) |
 | `new-construction.html` | New Construction — two clickable tiles |
 | `residential-construction.html`, `commercial-construction.html` | The two New Construction sub-pages (opened by the tiles) |
-| `other-services.html` | Other Services — roofing, siding, windows, concrete, and the catch-all work |
 | `gallery.html` | Project gallery |
 | `process.html` | The Discuss / Prepare / Build / Live process |
 | `reviews.html` | Customer reviews |
@@ -26,7 +25,7 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `styles.css` | All colors, fonts, and layout (site-wide) |
 | `site.js` | The Menu drop-down and scroll animations |
 
-**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all thirty `.html` files.
+**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all twenty-nine `.html` files.
 
 ## How to edit the site (first-time setup)
 
