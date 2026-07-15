@@ -10,6 +10,7 @@ Plain static HTML/CSS/JS — no framework, no build step. Twenty-nine real pages
 - The **header and footer are copy-pasted into all twenty-nine pages** — if you edit one (add a page link, change the phone number), make the same edit in every HTML file. The `aria-current="page"` marker is set on the current page's nav links.
 - `styles.css` — all styling. The palette and fonts are CSS variables in `:root` at the top (`--navy` deep blue, `--gold`/`--gold-bright`, `--paper` warm cream, `--black`). Change a color there and it changes site-wide. The wordmark uses `--wordmark` (Cinzel), loaded from Google Fonts via a `<link>` in each page's `<head>` — the only external dependency. `section[id],[id].svc{scroll-margin-top}` keeps the sticky header from covering a heading when the Services dropdown jumps to an anchor.
 - `site.js` — the Menu dropdown toggle (closes on outside-click, Escape, or link click) and scroll-reveal animations.
+- **Favicon**: `favicon.svg` is a purpose-built square mark derived from `logo-mark.svg` (navy tile, cream F, gold roofline) — the original logo is 240x208 and navy-on-transparent, which reads poorly at 16px and on dark tabs. `favicon-32.png` and `apple-touch-icon.png` (180x180) are rendered from it as fallbacks; regenerate with `qlmanage -t -s <size> -o . favicon.svg`. All three are linked in every page's `<head>`.
 - The contact form posts to Formspree (`https://formspree.io/f/mpqgewbv`) and emails submissions to Nick.Gaskill@fortistexas.com.
 
 ## Conventions
