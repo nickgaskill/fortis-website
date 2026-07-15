@@ -150,6 +150,15 @@ header{position:sticky;top:0;z-index:50;background:rgba(250,250,248,.94);backdro
 .tile-label{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;padding:0 1rem;text-align:center;color:#fff;font-weight:500;font-size:clamp(1.15rem,2.2vw,1.6rem);text-shadow:0 2px 12px rgba(5,9,16,.5)}
 .tile-wide{grid-column:1/-1;aspect-ratio:16/5}
 @media(max-width:560px){.tile-wide{grid-column:auto;aspect-ratio:4/3}}
+/* five tiles: 3 on top, 2 wider below — no empty cell */
+.tile-grid-5{grid-template-columns:repeat(6,1fr)}
+.tile-grid-5 .tile{grid-column:span 2}
+.tile-grid-5 .tile:nth-child(n+4){grid-column:span 3}
+@media(max-width:900px){
+  .tile-grid-5{grid-template-columns:repeat(2,1fr)}
+  .tile-grid-5 .tile,.tile-grid-5 .tile:nth-child(n+4){grid-column:auto}
+}
+@media(max-width:560px){.tile-grid-5{grid-template-columns:1fr}}
 
 /* ---------- projects / gallery ---------- */
 .dark-band{background:var(--navy-deep);color:var(--paper)}
