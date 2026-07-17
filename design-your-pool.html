@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Your Pool — Instant Rough Estimate | Fortis Contracting Group, Austin TX</title>
+<meta name="description" content="Build your dream pool step by step — style, size, spa, plaster color, tile, and add-ons — and get an instant rough estimate from Fortis Contracting Group in Austin, TX.">
+<link rel="canonical" href="https://www.fortistexas.com/design-your-pool.html">
+<meta property="og:site_name" content="Fortis Contracting Group">
+<meta property="og:title" content="Design Your Pool — Instant Rough Estimate | Fortis Contracting Group, Austin TX">
+<meta property="og:description" content="Build your dream pool step by step — style, size, spa, plaster color, tile, and add-ons — and get an instant rough estimate from Fortis Contracting Group in Austin, TX.">
+<meta property="og:url" content="https://www.fortistexas.com/design-your-pool.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap">
+<link rel="stylesheet" href="styles.css?v=30">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fortistexas.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.fortistexas.com/services.html"},
+    {"@type": "ListItem", "position": 3, "name": "Pools", "item": "https://www.fortistexas.com/pools.html"},
+    {"@type": "ListItem", "position": 4, "name": "Design Your Pool", "item": "https://www.fortistexas.com/design-your-pool.html"}
+   ]
+  }
+ ]
+}
+</script>
+<style>
+/* ---------- design-your-pool estimator (page-specific) ---------- */
+.dyp{background:var(--paper)}
+.dyp-layout{display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start;margin-top:2.5rem}
+@media(max-width:860px){.dyp-layout{grid-template-columns:1fr}}
+.dyp-card{position:sticky;top:92px;background:#fff;border:1px solid var(--gold);padding:1.6rem 1.5rem}
+@media(max-width:860px){.dyp-card{position:static}}
+.dyp-card h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 1rem}
+.dyp-picks{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:0 0 1.3rem}
+.dyp-picks li{font-size:.86rem;color:var(--ink-soft)}
+.dyp-picks .lbl{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.dyp-picks b{color:var(--navy);font-weight:600}
+.dyp-est{border:1px solid var(--rule);background:var(--paper);padding:1rem 1.1rem;margin-bottom:1.1rem}
+.dyp-est .lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.dyp-est .amt{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4vw,2.7rem);color:var(--gold-bright);line-height:1.1}
+.dyp-prog{height:5px;background:var(--rule);position:relative}
+.dyp-prog i{position:absolute;left:0;top:0;bottom:0;background:var(--gold-bright);transition:width .3s ease}
+.dyp-note{font-size:.7rem;font-style:italic;color:var(--ink-soft);margin-top:.9rem;line-height:1.5}
+.dyp-step h3{font-size:clamp(1.6rem,3.2vw,2.4rem);margin:0 0 .5rem}
+.dyp-step>.stepno{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.dyp-step .lede{margin-bottom:1.4rem;font-size:.98rem}
+.opt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.8rem}
+.opt{cursor:pointer;text-align:left;background:#fff;border:1px solid var(--rule);padding:1rem 1.05rem;font-family:var(--body);transition:border-color .15s ease,background .15s ease}
+.opt:hover{border-color:var(--gold)}
+.opt.sel{background:var(--navy);border-color:var(--navy)}
+.opt h4{font-weight:700;font-size:.98rem;color:var(--navy);margin:0 0 .2rem}
+.opt .sub{display:block;font-size:.76rem;color:var(--ink-soft);line-height:1.4}
+.opt .prc{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;color:var(--gold);margin-top:.45rem}
+.opt.sel h4{color:#fff}
+.opt.sel .sub{color:rgba(250,250,248,.7)}
+.opt.sel .prc{color:var(--gold-bright)}
+.opt .swatch{display:block;width:100%;aspect-ratio:16/6;border:1px solid rgba(23,27,23,.12);margin-bottom:.55rem}
+.opt .tileph{display:block;width:100%;aspect-ratio:16/6;margin-bottom:.55rem;position:relative;background:repeating-linear-gradient(45deg,rgba(214,166,60,.10) 0,rgba(214,166,60,.10) 1px,transparent 1px,transparent 10px),linear-gradient(160deg,#274063,#141F38)}
+.opt .tileph span{position:absolute;left:.5rem;bottom:.35rem;font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,250,248,.55)}
+.dyp-nav{display:flex;align-items:center;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
+.dyp-restart{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;cursor:pointer;color:var(--ink-soft);padding:.5rem 0}
+.dyp-restart:hover{color:var(--gold)}
+.btn[disabled]{opacity:.35;pointer-events:none}
+.dyp-summary ul.sum{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin:1rem 0 1.4rem}
+.dyp-summary ul.sum li{padding-left:1.4rem;position:relative;font-size:.92rem;color:var(--ink)}
+.dyp-summary ul.sum li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.dyp-incl{background:#fff;border:1px solid var(--rule);border-left:3px solid var(--gold);padding:1rem 1.2rem;margin:1.2rem 0 1.6rem}
+.dyp-incl h4{font-weight:700;font-size:.95rem;color:var(--navy);margin:0 0 .5rem}
+.dyp-incl ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.dyp-incl li{font-size:.82rem;color:var(--ink-soft);padding-left:1rem;position:relative}
+.dyp-incl li::before{content:"";position:absolute;left:0;top:.6em;width:.45rem;height:1px;background:var(--gold)}
+.dyp-disc{font-size:.76rem;font-style:italic;color:var(--ink-soft);line-height:1.55;margin-top:1.2rem}
+@media (prefers-reduced-motion:reduce){.dyp-prog i{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo-mark.svg" alt="" width="30" height="26"><span class="logo-text"><span class="logo-name">Fortis Contracting Group</span><span class="logo-tag">Interior Renovations. Outdoor Living. Pools.</span></span></a>
+    <div class="nav-actions">
+      <a class="nav-contact" href="contact.html">Free consultation</a>
+      <div class="menu-wrap">
+        <button class="menu-btn" id="menuBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menuPanel"><span class="bars"><i></i><i></i><i></i></span>Menu</button>
+        <div class="menu-panel" id="menuPanel" hidden>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a>
+              <ul class="menu-sub">
+                <li><a href="interior-remodels.html">Interior Remodels</a></li>
+                <li><a href="outdoor-living.html">Outdoor Living</a></li>
+                <li><a href="pools.html">Pools</a>
+                  <ul class="menu-sub2">
+                    <li><a href="pool-design-guide.html">Pool Design Guide</a></li>
+                    <li><a href="design-your-pool.html" aria-current="page">Design Your Pool</a></li>
+                  </ul>
+                </li>
+                <li><a href="home-additions-sunrooms.html">Home Additions &amp; Sunrooms</a></li>
+                <li><a href="new-construction.html">New Construction</a></li>
+              </ul>
+            </li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero on-dark">
+    <div class="wrap">
+      <p class="kicker">Pools</p>
+      <h1>Design your pool</h1>
+      <p class="lede">Pick your style, size, finishes, and extras — your rough estimate builds itself as you go. Send us the result and we'll make it real.</p>
+    </div>
+  </section>
+
+  <section class="dyp">
+    <div class="wrap">
+      <div class="dyp-layout">
+
+        <aside class="dyp-card" aria-live="polite">
+          <h2 id="dypTitle">Your Dream Build</h2>
+          <ul class="dyp-picks" id="dypPicks"></ul>
+          <div class="dyp-est">
+            <span class="lbl">Pool estimate</span>
+            <div class="amt" id="dypAmt">$ ---</div>
+          </div>
+          <div class="dyp-prog"><i id="dypProg" style="width:0%"></i></div>
+          <p class="dyp-note">A rough planning estimate — not a bid. Your final price is confirmed at a free on-site consultation.</p>
+        </aside>
+
+        <div id="dypStep" class="dyp-step"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band on-dark">
+    <div class="wrap">
+      <div>
+        <h2>Rather flip through ideas first?</h2>
+        <p>The Pool Design Guide walks every choice with pictures.</p>
+      </div>
+      <a class="btn btn-gold" href="pool-design-guide.html">Open the design guide</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-logo">Fortis Contracting Group</p>
+      <p class="foot-defn">for·tis — Latin adj. — strong; steadfast; built to last</p>
+      <p class="foot-areas">Serving Austin, Round Rock, Cedar Park, Georgetown, Leander, Pflugerville, Lakeway, Bee Cave, Kyle, Buda, Dripping Springs &amp; the surrounding Central Texas cities.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+15127439690">(512) 743-9690</a></li>
+        <li><a href="mailto:Nick.Gaskill@fortistexas.com">Nick.Gaskill@fortistexas.com</a></li>
+        <li><a href="https://www.instagram.com/fortistexas" rel="noopener">@fortistexas</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <span>© 2026 Fortis Contracting Group</span>
+    <span>Austin &amp; surrounding cities, TX</span>
+  </div>
+</footer>
+<script src="site.js?v=30"></script>
+<script>
+/* ============================================================
+   DESIGN-YOUR-POOL ESTIMATOR
+   >>> PRICING: EDIT THIS TABLE — these are PLACEHOLDER numbers.
+   All amounts are dollars added to the running total.
+   ============================================================ */
+var PRICING = {
+  style: { geometric: 78000, freeform: 82000, custom: 95000 },
+  size:  { petite: 0, classic: 12000, grand: 26000, imperial: 45000 },
+  spa:   { yes: 18000, no: 0 },
+  finish:{ tier1: 0, quartz: 4500, pebble: 8500 },
+  tile:  { classic: 0, porcelain: 1800, stone: 2600, glass: 3800, iridescent: 5200 },
+  addons:{ fountain: 4500, tree: 2500, uv: 1800, salt: 2600, heater: 6500, autofill: 1600, chiller: 7500, robot: 1800 }
+};
+
+var DATA = {
+  style: [
+    { k:'geometric', name:'Geometric', sub:'Clean lines and crisp corners that mirror the house.' },
+    { k:'freeform',  name:'Modern Freeform', sub:'Soft curves that flow with the landscape.' },
+    { k:'custom',    name:'Completely Custom', sub:'Professionally designed — vanishing edges, ledges, one-of-a-kind shapes.', from:true }
+  ],
+  size: [
+    { k:'petite',   name:'Petite',   sub:'~ 10 × 20 ft — plunge and cocktail pools.' },
+    { k:'classic',  name:'Classic',  sub:'~ 14 × 28 ft — the family standard.' },
+    { k:'grand',    name:'Grand',    sub:'~ 16 × 36 ft — swim laps, host crowds.' },
+    { k:'imperial', name:'Imperial', sub:'18 × 40 ft + — the estate pool.' }
+  ],
+  spa: [
+    { k:'yes', name:'Add a spa', sub:'Therapy jets, bench seating, fast independent heat.' },
+    { k:'no',  name:'No spa',   sub:'Keep it simple — you can always add one later.' }
+  ],
+  color: [
+    { k:'white',   name:'Pure White',     hex:'#EDEDE6', sub:'Bright azure water' },
+    { k:'ivory',   name:'Ivory',          hex:'#E3DCC9', sub:'Warm tropical blue' },
+    { k:'coolgrey',name:'Cool Grey',      hex:'#BFC3C4', sub:'Crisp light blue' },
+    { k:'french',  name:'French Grey',    hex:'#8E9494', sub:'Deep sky blue' },
+    { k:'graphite',name:'Graphite',       hex:'#5A6268', sub:'Lagoon blue' },
+    { k:'aqua',    name:'Caribbean Aqua', hex:'#77B5B2', sub:'Turquoise' },
+    { k:'tahoe',   name:'Tahoe Blue',     hex:'#41586E', sub:'Sapphire' },
+    { k:'midnight',name:'Midnight',       hex:'#23282D', sub:'Reflective lake' }
+  ],
+  finish: [
+    { k:'tier1',  name:'Tier 1 Plaster', sub:'Smooth classic plaster — included.' },
+    { k:'quartz', name:'Quartz',         sub:'Quartz aggregate — richer color, longer life.' },
+    { k:'pebble', name:'Pebble',         sub:'Pebble finish — the most durable and dimensional.' }
+  ],
+  tile: [
+    { k:'classic',    name:'Classic 6×6',      sub:'Clean, timeless waterline — included.' },
+    { k:'porcelain',  name:'Porcelain',        sub:'Durable with a modern, matte look.' },
+    { k:'stone',      name:'Stone-Look',       sub:'Organic texture that suits hill-country yards.' },
+    { k:'glass',      name:'Glass Mosaic',     sub:'Depth and sparkle at the waterline.' },
+    { k:'iridescent', name:'Iridescent Glass', sub:'Shifts color with the light — the showstopper.' }
+  ],
+  addons: [
+    { k:'fountain', name:'Fountain &amp; water features', sub:'Sheer descents, bubblers, deck jets.' },
+    { k:'tree',     name:'Tree protection', sub:'Root barriers and careful placement.' },
+    { k:'uv',       name:'UV sanitation',  sub:'Extra clean, fewer chemicals.' },
+    { k:'salt',     name:'Salt water system', sub:'Softer on skin and eyes.' },
+    { k:'heater',   name:'Heater', sub:'Swim spring through Thanksgiving.' },
+    { k:'autofill', name:'Auto-fill', sub:'Tops itself off, no hose.' },
+    { k:'chiller',  name:'Chiller', sub:'Refreshing water in August.' },
+    { k:'robot',    name:'Robotic cleaner', sub:'Scrubbed while you\'re at work.' }
+  ]
+};
+
+(function () {
+  var state = { style:null, size:null, spa:null, color:'white', finish:'tier1', tile:'classic', addons:[] };
+  var stepEl = document.getElementById('dypStep');
+  var picksEl = document.getElementById('dypPicks');
+  var amtEl = document.getElementById('dypAmt');
+  var progEl = document.getElementById('dypProg');
+  var step = 0;
+  var STEPS = ['style','size','spa','finish','tile','addons','summary'];
+  var TITLES = {
+    style:['Step 1: Choose your style','Three ways to shape the water — pick the one that fits your home.'],
+    size:['Step 2: Pick a size','Typical starting footprints — every pool is sized to your yard on site.'],
+    spa:['Step 3: Add a spa','The most-requested upgrade we build.'],
+    finish:['Step 4: Plaster color &amp; finish','Your plaster sets the color of the water itself. Pick a color, then a finish tier.'],
+    tile:['Step 5: Waterline tile','Sourced through our partners at AquaTiles — samples in hand at your consultation.'],
+    addons:['Step 6: Choose your add-ons','Select as many as you like — the estimate updates as you go.'],
+    summary:['Your dream build','Here\'s the pool you designed. Send it to us and we\'ll take it from here.']
+  };
+  function money(n){ return '$' + n.toLocaleString('en-US'); }
+  function price(){
+    if (!state.style) return null;
+    var t = PRICING.style[state.style];
+    if (state.size) t += PRICING.size[state.size];
+    if (state.spa)  t += PRICING.spa[state.spa];
+    t += PRICING.finish[state.finish];
+    t += PRICING.tile[state.tile];
+    state.addons.forEach(function(k){ t += PRICING.addons[k]; });
+    return t;
+  }
+  function label(group, k){
+    var it = DATA[group].filter(function(o){return o.k===k;})[0];
+    return it ? it.name : null;
+  }
+  function pickRows(){
+    var rows = [];
+    if (state.style) rows.push(['Pool style', label('style',state.style)]);
+    if (state.size)  rows.push(['Pool size', label('size',state.size)]);
+    if (state.spa)   rows.push(['Spa', state.spa==='yes'?'Spa':'No spa']);
+    if (step >= 3)   rows.push(['Finish', label('color',state.color) + ' · ' + label('finish',state.finish)]);
+    if (step >= 4)   rows.push(['Waterline tile', label('tile',state.tile)]);
+    if (step >= 5 && state.addons.length) rows.push(['Add-ons', state.addons.map(function(k){return label('addons',k);}).join(', ')]);
+    return rows;
+  }
+  function renderCard(){
+    picksEl.innerHTML = pickRows().map(function(r){
+      return '<li><span class="lbl">'+r[0]+'</span><b>'+r[1]+'</b></li>';
+    }).join('') || '<li><span class="lbl">Selections</span><b>Start with a style →</b></li>';
+    var p = price();
+    amtEl.textContent = p === null ? '$ ---' : money(p);
+    progEl.style.width = Math.round((step) / (STEPS.length-1) * 100) + '%';
+  }
+  function priceTag(group,k){
+    var v = PRICING[group] ? PRICING[group][k] : 0;
+    if (group==='style') return (k==='custom'?'from ':'base ') + money(v);
+    return v === 0 ? 'Included' : '+ ' + money(v);
+  }
+  function nav(backOk, nextOk, nextLabel){
+    return '<div class="dyp-nav">'+
+      (backOk ? '<button type="button" class="btn btn-navy" id="dypBack">← Back</button>' : '')+
+      (nextLabel === null ? '' : '<button type="button" class="btn btn-gold" id="dypNext"'+(nextOk?'':' disabled')+'>'+(nextLabel||'Next →')+'</button>')+
+      '<button type="button" class="dyp-restart" id="dypRestart">Start over</button></div>';
+  }
+  function render(){
+    var g = STEPS[step];
+    var h = '<p class="stepno">'+(step<6?('Step '+(step+1)+' of 6'):'Complete')+'</p><h3>'+TITLES[g][0]+'</h3><p class="lede">'+TITLES[g][1]+'</p>';
+    if (g==='style' || g==='size' || g==='spa'){
+      h += '<div class="opt-grid">'+DATA[g].map(function(o){
+        return '<button type="button" class="opt'+(state[g]===o.k?' sel':'')+'" data-g="'+g+'" data-k="'+o.k+'"><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span><span class="prc">'+priceTag(g,o.k)+'</span></button>';
+      }).join('')+'</div>';
+      h += nav(step>0, !!state[g]);
+    } else if (g==='finish'){
+      h += '<div class="opt-grid" style="grid-template-columns:repeat(auto-fill,minmax(140px,1fr))">'+DATA.color.map(function(o){
+        return '<button type="button" class="opt'+(state.color===o.k?' sel':'')+'" data-g="color" data-k="'+o.k+'"><span class="swatch" style="background:'+o.hex+'"></span><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span></button>';
+      }).join('')+'</div>';
+      h += '<p class="lede" style="margin:1.4rem 0 .8rem"><b>Finish tier</b></p><div class="opt-grid">'+DATA.finish.map(function(o){
+        return '<button type="button" class="opt'+(state.finish===o.k?' sel':'')+'" data-g="finish" data-k="'+o.k+'"><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span><span class="prc">'+priceTag('finish',o.k)+'</span></button>';
+      }).join('')+'</div>';
+      h += nav(true, true);
+    } else if (g==='tile'){
+      h += '<div class="opt-grid">'+DATA.tile.map(function(o){
+        return '<button type="button" class="opt'+(state.tile===o.k?' sel':'')+'" data-g="tile" data-k="'+o.k+'"><span class="tileph"><span>Sample</span></span><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span><span class="prc">'+priceTag('tile',o.k)+'</span></button>';
+      }).join('')+'</div>';
+      h += nav(true, true);
+    } else if (g==='addons'){
+      h += '<div class="opt-grid">'+DATA.addons.map(function(o){
+        var on = state.addons.indexOf(o.k) !== -1;
+        return '<button type="button" class="opt'+(on?' sel':'')+'" data-g="addons" data-k="'+o.k+'"><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span><span class="prc">+ '+money(PRICING.addons[o.k])+'</span></button>';
+      }).join('')+'</div>';
+      h += nav(true, true, 'See my dream build →');
+    } else {
+      var p = price();
+      h += '<div class="dyp-summary"><ul class="sum">'+pickRows().map(function(r){return '<li><b>'+r[0]+':</b> '+r[1]+'</li>';}).join('')+'</ul>';
+      h += '<div class="dyp-est" style="max-width:20rem"><span class="lbl">Project estimate</span><div class="amt">'+money(p)+'</div></div>';
+      h += '<div class="dyp-incl"><h4>Included in every Fortis pool</h4><ul><li>Permits &amp; construction plans — we handle the paperwork</li><li>Steel-reinforced gunite shell</li><li>Pentair equipment with smart automation</li><li>Tier 1 plaster &amp; classic waterline tile baseline</li><li>Excavation to completion with phase-by-phase quality checks</li></ul></div>';
+      h += '<p class="lede" style="margin-bottom:.8rem"><b>Send us your dream build</b> — we\'ll review it and reach out to schedule your free on-site consultation.</p>';
+      h += '<form class="lead-form" action="https://formspree.io/f/mpqgewbv" method="POST" style="margin-top:0">'+
+        '<input type="hidden" name="_subject" value="New Dream Build pool estimate — fortistexas.com">'+
+        '<input type="hidden" name="dream_build" id="dypBuild">'+
+        '<div class="form-row"><div class="field"><label for="d-name">Name</label><input id="d-name" type="text" name="name" autocomplete="name" placeholder="Your name" required></div>'+
+        '<div class="field"><label for="d-phone">Phone</label><input id="d-phone" type="tel" name="phone" autocomplete="tel" placeholder="(512) 000-0000" required></div></div>'+
+        '<div class="field"><label for="d-email">Email</label><input id="d-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required></div>'+
+        '<div class="field"><label for="d-address">Property address</label><input id="d-address" type="text" name="address" autocomplete="street-address" placeholder="Street, city" required></div>'+
+        '<button class="btn btn-gold" type="submit">Send my dream build</button></form>';
+      h += '<p class="dyp-disc">NOTE: This is a rough planning estimate, not a bid or final price. Site conditions, access, utilities, and your final selections all affect cost — your exact number comes from a free on-site consultation.</p></div>';
+      h += nav(true, false, null);
+    }
+    stepEl.innerHTML = h;
+    var nx = document.getElementById('dypNext');
+    stepEl.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click', function(){
+        var gg = b.getAttribute('data-g'), k = b.getAttribute('data-k');
+        if (gg === 'addons'){
+          var ix = state.addons.indexOf(k);
+          if (ix === -1) state.addons.push(k); else state.addons.splice(ix,1);
+        } else { state[gg] = k; }
+        render(); renderCard();
+      });
+    });
+    if (nx) nx.addEventListener('click', function(){ step = Math.min(step+1, STEPS.length-1); render(); renderCard(); scrollTop(); });
+    var bk = document.getElementById('dypBack');
+    if (bk) bk.addEventListener('click', function(){ step = Math.max(step-1, 0); render(); renderCard(); scrollTop(); });
+    var rs = document.getElementById('dypRestart');
+    if (rs) rs.addEventListener('click', function(){ state = { style:null,size:null,spa:null,color:'white',finish:'tier1',tile:'classic',addons:[] }; step = 0; render(); renderCard(); scrollTop(); });
+    var form = stepEl.querySelector('form');
+    if (form) form.addEventListener('submit', function(){
+      document.getElementById('dypBuild').value = pickRows().map(function(r){return r[0]+': '+r[1];}).join(' | ') + ' | Estimate: ' + money(price());
+    });
+    renderCard();
+  }
+  function scrollTop(){ var y = stepEl.getBoundingClientRect().top + window.pageYOffset - 90; if (window.pageYOffset > y) window.scrollTo({top:y}); }
+  render();
+})();
+</script>
+</body>
+</html>
