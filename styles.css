@@ -61,6 +61,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(250,250,248,.94);backdro
 .menu-panel[hidden]{display:none}
 .menu-panel ul{list-style:none}
 .menu-panel>ul>li>a{display:block;font-family:var(--mono);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);padding:.62rem 1.3rem}
+.menu-head{display:block;font-family:var(--mono);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);padding:.62rem 1.3rem .35rem;cursor:default}
 .menu-panel>ul>li>a:hover,.menu-panel>ul>li>a:focus-visible,.menu-panel a[aria-current="page"]{color:var(--navy);background:var(--paper)}
 .menu-sub{padding:.05rem 0 .35rem}
 .menu-sub a{display:block;font-family:var(--body);font-size:.9rem;letter-spacing:.01em;text-transform:none;text-decoration:none;color:var(--ink-soft);padding:.4rem 1.3rem .4rem 1.95rem}
