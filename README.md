@@ -12,8 +12,8 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `services.html` | Services overview — three cards linking to the category pages below |
 | `interior-remodels.html` | Interior Remodels — a grid of clickable photo tiles |
 | `kitchen-remodels.html`, `bathroom-remodels.html`, `custom-cabinetry.html`, `painting.html`, `flooring.html`, `whole-home-renovations.html` | The six Interior Remodels sub-pages (opened by the tiles) |
-| `exterior-living.html` | Exterior Living — a grid of clickable photo tiles |
-| `landscape-design.html`, `landscaping.html`, `hardscaping.html`, `pools.html`, `outdoor-living-spaces.html`, `sport-courts.html` | The six Exterior Living sub-pages (opened by the tiles) |
+| `outdoor-living.html` | Outdoor Living — a grid of clickable photo tiles |
+| `landscape-design.html`, `landscaping.html`, `hardscaping.html`, `pools.html`, `outdoor-living-spaces.html`, `sport-courts.html` | The six Outdoor Living sub-pages (opened by the tiles) |
 | `home-additions-sunrooms.html` | Home Additions & Sunrooms — a grid of clickable photo tiles |
 | `sunrooms.html`, `home-additions.html`, `casitas.html`, `patio-extensions.html`, `adus.html` | The five Home Additions sub-pages (opened by the tiles) |
 | `new-construction.html` | New Construction — two clickable tiles |
