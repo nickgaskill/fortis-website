@@ -23,11 +23,14 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `portfolio.html` | Project portfolio (incl. before/after sliders) |
 | `process.html` | The Discuss / Prepare / Build / Live process |
 | `reviews.html` | Customer reviews |
+| `about.html` | About the company + meet the owner |
+| `blog.html` | Blog index — copy the sample post to write new ones |
+| `choosing-your-pool-style.html` | First blog post (pool styles) |
 | `contact.html` | Contact info + the consultation form |
 | `styles.css` | All colors, fonts, and layout (site-wide) |
 | `site.js` | The Menu drop-down and scroll animations |
 
-**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all thirty-one `.html` files.
+**Important:** the header (with the Menu drop-down) and footer are copy-pasted at the top and bottom of **every** page. If you change one (e.g. the phone number or a menu link), make the same change in all thirty-four `.html` files.
 
 ## How to edit the site (first-time setup)
 
