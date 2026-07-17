@@ -81,6 +81,8 @@
 .dyp-incl li{font-size:.82rem;color:var(--ink-soft);padding-left:1rem;position:relative}
 .dyp-incl li::before{content:"";position:absolute;left:0;top:.6em;width:.45rem;height:1px;background:var(--gold)}
 .dyp-disc{font-size:.76rem;font-style:italic;color:var(--ink-soft);line-height:1.55;margin-top:1.2rem}
+.dyp-ack{display:flex;gap:.6rem;align-items:flex-start;font-size:.88rem;color:var(--ink);line-height:1.45;cursor:pointer}
+.dyp-ack input{margin-top:.2rem;width:1.05rem;height:1.05rem;accent-color:var(--gold-bright);flex:none}
 @media (prefers-reduced-motion:reduce){.dyp-prog i{transition:none}}
 </style>
 </head>
@@ -205,7 +207,7 @@
    All amounts are dollars added to the running total.
    ============================================================ */
 var PRICING = {
-  style: { geometric: 78000, freeform: 82000, custom: 95000 },
+  style: { geometric: 78000, freeform: 82000, custom: 90000 },
   size:  { petite: 0, classic: 12000, grand: 26000, imperial: 45000 },
   spa:   { yes: 18000, no: 0 },
   finish:{ tier1: 0, quartz: 4500, pebble: 8500 },
@@ -270,6 +272,7 @@ var DATA = {
   var amtEl = document.getElementById('dypAmt');
   var progEl = document.getElementById('dypProg');
   var step = 0;
+  var customStep = false;
   var STEPS = ['style','size','spa','finish','tile','addons','summary'];
   var TITLES = {
     style:['Step 1: Choose your style','Three ways to shape the water — pick the one that fits your home.'],
@@ -310,8 +313,8 @@ var DATA = {
       return '<li><span class="lbl">'+r[0]+'</span><b>'+r[1]+'</b></li>';
     }).join('') || '<li><span class="lbl">Selections</span><b>Start with a style →</b></li>';
     var p = price();
-    amtEl.textContent = p === null ? '$ ---' : money(p);
-    progEl.style.width = Math.round((step) / (STEPS.length-1) * 100) + '%';
+    amtEl.textContent = p === null ? '$ ---' : (state.style === 'custom' ? 'From ' + money(PRICING.style.custom) : money(p));
+    progEl.style.width = (customStep ? 100 : Math.round((step) / (STEPS.length-1) * 100)) + '%';
   }
   function priceTag(group,k){
     var v = PRICING[group] ? PRICING[group][k] : 0;
@@ -325,6 +328,27 @@ var DATA = {
       '<button type="button" class="dyp-restart" id="dypRestart">Start over</button></div>';
   }
   function render(){
+    if (customStep){
+      var ch = '<p class="stepno">Custom build</p><h3>Let\'s design it together</h3>'+
+        '<p class="lede">A completely custom pool starts from a blank page — vanishing edges, swim-up bars, one-of-a-kind shapes — so it\'s priced from your yard and your vision, not a menu. Leave your details and we\'ll set up your free design consultation.</p>'+
+        '<form class="lead-form" action="https://formspree.io/f/mpqgewbv" method="POST" style="margin-top:0;max-width:34rem">'+
+        '<input type="hidden" name="_subject" value="Custom pool inquiry — fortistexas.com">'+
+        '<input type="hidden" name="dream_build" value="Pool style: Completely Custom — custom design consultation requested">'+
+        '<div class="form-row"><div class="field"><label for="c-name">Name</label><input id="c-name" type="text" name="name" autocomplete="name" placeholder="Your name" required></div>'+
+        '<div class="field"><label for="c-phone">Phone</label><input id="c-phone" type="tel" name="phone" autocomplete="tel" placeholder="(512) 000-0000" required></div></div>'+
+        '<div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required></div>'+
+        '<div class="field"><label for="c-address">Property address</label><input id="c-address" type="text" name="address" autocomplete="street-address" placeholder="Street, city" required></div>'+
+        '<label class="dyp-ack"><input type="checkbox" id="dypAck" required> <span>I understand fully custom pools start at '+money(PRICING.style.custom)+'.</span></label>'+
+        '<button class="btn btn-gold" type="submit" id="dypCustomSubmit" disabled>Request my custom consultation</button></form>'+
+        '<div class="dyp-nav"><button type="button" class="btn btn-navy" id="dypBack">← Back</button><button type="button" class="dyp-restart" id="dypRestart">Start over</button></div>';
+      stepEl.innerHTML = ch;
+      document.getElementById('dypBack').addEventListener('click', function(){ customStep = false; render(); renderCard(); scrollTop(); });
+      document.getElementById('dypRestart').addEventListener('click', resetAll);
+      var ack = document.getElementById('dypAck'), sub = document.getElementById('dypCustomSubmit');
+      ack.addEventListener('change', function(){ sub.disabled = !ack.checked; });
+      renderCard();
+      return;
+    }
     var g = STEPS[step];
     var h = '<p class="stepno">'+(step<6?('Step '+(step+1)+' of 6'):'Complete')+'</p><h3>'+TITLES[g][0]+'</h3><p class="lede">'+TITLES[g][1]+'</p>';
     if (g==='style' || g==='size' || g==='spa'){
@@ -380,17 +404,22 @@ var DATA = {
         render(); renderCard();
       });
     });
-    if (nx) nx.addEventListener('click', function(){ step = Math.min(step+1, STEPS.length-1); render(); renderCard(); scrollTop(); });
+    if (nx) nx.addEventListener('click', function(){
+      if (STEPS[step] === 'style' && state.style === 'custom'){ customStep = true; }
+      else { step = Math.min(step+1, STEPS.length-1); }
+      render(); renderCard(); scrollTop();
+    });
     var bk = document.getElementById('dypBack');
     if (bk) bk.addEventListener('click', function(){ step = Math.max(step-1, 0); render(); renderCard(); scrollTop(); });
     var rs = document.getElementById('dypRestart');
-    if (rs) rs.addEventListener('click', function(){ state = { style:null,size:null,spa:null,color:'white',finish:'tier1',tile:'classic',addons:[] }; step = 0; render(); renderCard(); scrollTop(); });
+    if (rs) rs.addEventListener('click', resetAll);
     var form = stepEl.querySelector('form');
     if (form) form.addEventListener('submit', function(){
       document.getElementById('dypBuild').value = pickRows().map(function(r){return r[0]+': '+r[1];}).join(' | ') + ' | Estimate: ' + money(price());
     });
     renderCard();
   }
+  function resetAll(){ state = { style:null,size:null,spa:null,color:'white',finish:'tier1',tile:'classic',addons:[] }; step = 0; customStep = false; render(); renderCard(); scrollTop(); }
   function scrollTop(){ var y = stepEl.getBoundingClientRect().top + window.pageYOffset - 90; if (window.pageYOffset > y) window.scrollTo({top:y}); }
   render();
 })();
