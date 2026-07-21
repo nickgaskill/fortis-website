@@ -21,7 +21,7 @@ The site has a **"Menu" button that opens a drop-down** (with the Services sub-i
 | `pool-design-guide.html` | The flip-through pool design brochure (styles, sizes, finishes, equipment) |
 | `design-your-pool.html` | Interactive pool estimator — edit the PRICING table in this file to set real prices |
 | `portfolio.html` | Project portfolio (incl. before/after sliders) |
-| `process.html` | The Discuss / Prepare / Build / Live process |
+| `process.html` | The Discuss / Design / Build / Live process |
 | `reviews.html` | Customer reviews |
 | `about.html` | About the company + meet the owner |
 | `blog.html` | Blog index — copy the sample post to write new ones |
