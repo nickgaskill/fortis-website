@@ -139,6 +139,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(250,250,248,.94);backdro
 .cat-list li{padding-left:1.1rem;position:relative}
 .cat-list li::before{content:"";position:absolute;left:0;top:.72em;width:.5rem;height:1px;background:var(--gold)}
 .cat-note{margin-top:1.6rem;font-style:italic;color:var(--ink-soft);font-size:.95rem}
+.ch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:2.2rem}
+@media(max-width:760px){.ch-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.ch-grid{grid-template-columns:1fr}}
+.ch-grid img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;display:block;cursor:zoom-in}
 
 /* ---------- service tiles ---------- */
 .tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:2.5rem}
@@ -287,6 +291,10 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
 @media(max-width:520px){.pf-grid-4{grid-template-columns:1fr}}
 .pf-cta{text-align:center;margin-top:2.5rem}
 .pf{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;margin:0}
+a.pf{text-decoration:none;color:inherit}
+a.pf:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+.pf-feat{grid-column:1/-1;aspect-ratio:16/6}
+@media(max-width:520px){.pf-feat{grid-column:auto;aspect-ratio:3/4}}
 .pf img,.pf-ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .pf-ph{background:repeating-linear-gradient(45deg,rgba(214,166,60,.10) 0,rgba(214,166,60,.10) 1px,transparent 1px,transparent 10px),linear-gradient(160deg,#274063,#141F38)}
 .pf::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(9,14,25,.5) 0,rgba(9,14,25,.14) 34%,rgba(9,14,25,0) 64%)}
