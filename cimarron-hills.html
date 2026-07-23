@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cimarron Hills Project — Georgetown, TX | Fortis Contracting Group</title>
-<meta name="description" content="Tour a Fortis Contracting Group project in the Cimarron Hills golf community in Georgetown, TX — full photo gallery.">
+<title>Cimarron Hills — Pool, Spa &amp; Outdoor Living, Georgetown TX | Fortis Contracting Group</title>
+<meta name="description" content="A complete backyard transformation in the Cimarron Hills golf community in Georgetown, TX — gunite pool and spa with fountains, covered outdoor living room with fireplace, and a full outdoor kitchen.">
 <link rel="canonical" href="https://www.fortistexas.com/cimarron-hills.html">
 <meta property="og:site_name" content="Fortis Contracting Group">
-<meta property="og:title" content="Cimarron Hills Project — Georgetown, TX | Fortis Contracting Group">
-<meta property="og:description" content="Tour a Fortis Contracting Group project in the Cimarron Hills golf community in Georgetown, TX — full photo gallery.">
+<meta property="og:title" content="Cimarron Hills — Pool, Spa &amp; Outdoor Living, Georgetown TX | Fortis Contracting Group">
+<meta property="og:description" content="A complete backyard transformation in the Cimarron Hills golf community in Georgetown, TX — gunite pool and spa with fountains, covered outdoor living room with fireplace, and a full outdoor kitchen.">
 <meta property="og:url" content="https://www.fortistexas.com/cimarron-hills.html">
+<meta property="og:image" content="https://www.fortistexas.com/cimarron-01.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
@@ -33,6 +34,15 @@
  ]
 }
 </script>
+<style>
+.lb{position:fixed;inset:0;z-index:200;background:rgba(9,14,25,.94);display:flex;align-items:center;justify-content:center}
+.lb[hidden]{display:none}
+.lb img{max-width:90vw;max-height:86vh;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.lb-x{position:absolute;top:1rem;right:1.2rem;font-size:1.2rem;background:none;border:none;color:#fff;cursor:pointer;padding:.6rem}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);font-size:1.5rem;background:rgba(250,250,248,.1);border:1px solid rgba(250,250,248,.35);color:#fff;cursor:pointer;padding:.7rem 1rem}
+.lb-btn:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+.lb-prev{left:1rem}.lb-next{right:1rem}
+</style>
 </head>
 <body>
 
@@ -78,33 +88,38 @@
     <div class="wrap">
       <p class="kicker">Portfolio · Georgetown, TX</p>
       <h1>Cimarron Hills</h1>
-      <p class="lede">A Fortis project in the Cimarron Hills golf community west of Georgetown.</p>
+      <p class="lede">A complete backyard transformation — pool, spa, outdoor living, and an outdoor kitchen, built as one.</p>
     </div>
   </section>
 
   <section>
     <div class="wrap">
       <p class="eyebrow">The project</p>
-      <h2>Photo gallery</h2>
-      <p class="lede">The full photo set is on its way — check back soon to walk through the whole project.</p>
-      <div class="ch-grid">
-        <div class="proj-ph"><span>Photo — coming soon</span></div>
-        <div class="proj-ph"><span>Photo — coming soon</span></div>
-        <div class="proj-ph"><span>Photo — coming soon</span></div>
-        <div class="proj-ph"><span>Photo — coming soon</span></div>
-        <div class="proj-ph"><span>Photo — coming soon</span></div>
-        <div class="proj-ph"><span>Photo — coming soon</span></div>
-        <div class="proj-ph"><span>Photo — coming soon</span></div>
-        <div class="proj-ph"><span>Photo — coming soon</span></div>
+      <h2>One backyard, every trade</h2>
+      <p class="lede">This project brought the whole Fortis playbook into a single backyard in the Cimarron Hills golf community west of Georgetown. A gunite pool and spa with fountains anchor the space, wrapped in light stone decking. Under the extended roofline, a tongue-and-groove ceiling covers a full outdoor living room — fireplace, TV, and ceiling fans — and the outdoor kitchen pairs a built-in gas grill with a kamado smoker. Designed and built by one team, start to finish.</p>
+      <div class="ch-grid" id="kwGallery">
+        <img src="cimarron-01.jpg" alt="Backyard with gunite pool, spa, and covered outdoor living room" loading="lazy">
+        <img src="cimarron-02.jpg" alt="Pool and spa with fountains beside a covered patio" loading="lazy">
+        <img src="cimarron-03.jpg" alt="Covered patio with lounge seating, TV, and outdoor fireplace beside the pool" loading="lazy">
+        <img src="cimarron-04.jpg" alt="Outdoor fireplace with mounted TV and lounge seating" loading="lazy">
+        <img src="cimarron-05.jpg" alt="Outdoor living room with tongue-and-groove ceiling and ceiling fan" loading="lazy">
+        <img src="cimarron-06.jpg" alt="Outdoor kitchen with built-in gas grill and kamado smoker" loading="lazy">
       </div>
       <a class="section-link" href="portfolio.html">← Back to the portfolio</a>
     </div>
   </section>
 
+  <div class="lb" id="kwLb" hidden>
+    <button class="lb-x" id="kwLbX" type="button" aria-label="Close">✕</button>
+    <button class="lb-btn lb-prev" id="kwLbPrev" type="button" aria-label="Previous photo">←</button>
+    <img id="kwLbImg" src="" alt="">
+    <button class="lb-btn lb-next" id="kwLbNext" type="button" aria-label="Next photo">→</button>
+  </div>
+
   <section class="cta-band on-dark">
     <div class="wrap">
       <div>
-        <h2>Want a project like this one?</h2>
+        <h2>Want a backyard like this?</h2>
         <p>Consultations are always free — no cost, no pressure.</p>
       </div>
       <a class="btn btn-gold" href="contact.html">Get a free consultation</a>
@@ -146,5 +161,27 @@
   </div>
 </footer>
 <script src="site.js?v=32"></script>
+<script>
+(function () {
+  var imgs = [].slice.call(document.querySelectorAll('#kwGallery img'));
+  var lb = document.getElementById('kwLb'), pic = document.getElementById('kwLbImg');
+  if (!imgs.length || !lb) return;
+  var i = 0;
+  function show(n){ i = (n + imgs.length) % imgs.length; pic.src = imgs[i].src; pic.alt = imgs[i].alt; }
+  function open(n){ show(n); lb.hidden = false; document.body.style.overflow = 'hidden'; }
+  function close(){ lb.hidden = true; document.body.style.overflow = ''; }
+  imgs.forEach(function (im, n) { im.addEventListener('click', function () { open(n); }); });
+  document.getElementById('kwLbX').addEventListener('click', close);
+  document.getElementById('kwLbPrev').addEventListener('click', function () { show(i - 1); });
+  document.getElementById('kwLbNext').addEventListener('click', function () { show(i + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(i - 1);
+    if (e.key === 'ArrowRight') show(i + 1);
+  });
+})();
+</script>
 </body>
 </html>
