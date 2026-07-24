@@ -42,6 +42,33 @@
  ]
 }
 </script>
+<style>
+/* Browse-by-category gallery (below the featured projects) + its lightbox */
+.catg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:2.4rem}
+@media(max-width:900px){.catg-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.catg-grid{grid-template-columns:repeat(2,1fr)}}
+.catg{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border:none;margin:0;padding:0;cursor:pointer;background:#0E1B33;font-family:inherit;text-align:left}
+.catg-img,.catg-ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.catg-ph{background:repeating-linear-gradient(45deg,rgba(214,166,60,.10) 0,rgba(214,166,60,.10) 1px,transparent 1px,transparent 10px),linear-gradient(160deg,#274063,#141F38)}
+.catg:hover .catg-img{transform:scale(1.05)}
+.catg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,14,25,.8) 0,rgba(9,14,25,.3) 44%,rgba(9,14,25,0) 74%);transition:background .2s ease}
+.catg:hover::after{background:linear-gradient(0deg,rgba(9,14,25,.84) 0,rgba(9,14,25,.4) 48%,rgba(9,14,25,.08) 80%)}
+.catg-bar{position:absolute;left:.95rem;right:.95rem;bottom:.85rem;z-index:2;display:flex;flex-direction:column;gap:.16rem;color:#fff}
+.catg-name{font-weight:600;font-size:1rem;letter-spacing:.02em;text-shadow:0 2px 10px rgba(5,9,16,.5)}
+.catg-count{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright)}
+.catg-view{position:absolute;top:.75rem;right:.8rem;z-index:2;font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(9,14,25,.4);border:1px solid rgba(255,255,255,.4);padding:.28rem .5rem;opacity:0;transform:translateY(-4px);transition:opacity .2s ease,transform .2s ease}
+.catg:hover .catg-view{opacity:1;transform:none}
+.catg.empty{cursor:default}
+.catg.empty .catg-count{color:rgba(255,255,255,.6)}
+.clb{position:fixed;inset:0;z-index:200;background:rgba(9,14,25,.94);display:flex;align-items:center;justify-content:center}
+.clb[hidden]{display:none}
+.clb-img{max-width:90vw;max-height:84vh;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.clb-x{position:absolute;top:1rem;right:1.2rem;font-size:1.2rem;background:none;border:none;color:#fff;cursor:pointer;padding:.6rem}
+.clb-btn{position:absolute;top:50%;transform:translateY(-50%);font-size:1.5rem;background:rgba(250,250,248,.1);border:1px solid rgba(250,250,248,.35);color:#fff;cursor:pointer;padding:.7rem 1rem}
+.clb-btn:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+.clb-prev{left:1rem}.clb-next{right:1rem}
+.clb-cap{position:absolute;bottom:1.05rem;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:rgba(250,250,248,.75);text-align:center;max-width:80vw}
+</style>
 </head>
 <body>
 
@@ -162,6 +189,78 @@
     </div>
   </section>
 
+  <section id="browse-by-type">
+    <div class="wrap">
+      <p class="eyebrow">Browse by type</p>
+      <h2>Explore by category</h2>
+      <p class="lede">Pick a category to open every photo we've grouped under it — kitchens, baths, outdoor living and more. We're adding to these all the time.</p>
+      <div class="catg-grid" id="catgGrid"><!-- boxes are generated from #catgData below --></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CATEGORY PHOTOS  —  THIS BLOCK IS THE ONLY PLACE YOU EDIT.
+       • Add a photo to a category: put the image file in this folder,
+         then add a line   <img src="FILENAME.jpg" alt="Short description">
+         inside that category's <div>. The box cover is the first photo
+         and the "N photos" count updates on its own.
+       • Add a new category: copy one   <div data-cat="ID" data-label="Name">…</div>
+         block, give it a new data-cat (any unique id, no spaces) and a
+         data-label (the name shown on the box). An empty category shows a
+         "Photos coming soon" box until you add the first <img>.
+       • Remove a category: delete its <div>.
+       (These are seeded with existing project photos as a starting point —
+        swap them for your own category shots whenever you like.)
+       ============================================================ -->
+  <div id="catgData" hidden>
+    <div data-cat="kitchens" data-label="Kitchens">
+      <img src="dovetail-13.webp" alt="Custom kitchen with full-height cabinetry and a wide island">
+      <img src="dovetail-12.webp" alt="Kitchen island with pendant lighting">
+      <img src="dovetail-14.webp" alt="Kitchen with grey cabinetry, range, and stone counters">
+      <img src="dovetail-15.webp" alt="Kitchen with windows and adjacent fireplace seating">
+      <img src="dovetail-10.webp" alt="Open-plan great room and kitchen with wide glass doors">
+      <img src="dovetail-11.webp" alt="Great room looking through to the kitchen and dining">
+    </div>
+    <div data-cat="baths" data-label="Bathrooms">
+      <img src="dovetail-24.webp" alt="Primary bathroom with marble tile, freestanding tub, and double vanity">
+      <img src="dovetail-25.webp" alt="Vanity with custom cabinetry">
+    </div>
+    <div data-cat="living" data-label="Living Spaces">
+      <img src="dovetail-07.webp" alt="Living room with stone fireplace, exposed beams, and a large ceiling fan">
+      <img src="dovetail-06.webp" alt="Living area with chandelier and tall windows to the yard">
+      <img src="dovetail-08.webp" alt="Living room opening to the covered patio through black-framed glass doors">
+      <img src="dovetail-09.webp" alt="Open living and kitchen with fireplace">
+      <img src="cimarron-03.jpg" alt="Covered outdoor living room with tongue-and-groove ceiling, fireplace, and TV">
+    </div>
+    <div data-cat="outdoor" data-label="Outdoor Living">
+      <img src="cimarron-01.jpg" alt="Backyard with gunite pool, spa, and covered outdoor living room">
+      <img src="dovetail-28.webp" alt="Covered outdoor living room with fireplace, beamed ceiling, and dining area">
+      <img src="cimarron-04.jpg" alt="Outdoor kitchen with built-in gas grill and kamado smoker">
+      <img src="dovetail-31.webp" alt="Pergola and lawn at the back of the property">
+    </div>
+    <div data-cat="pools" data-label="Pools &amp; Spas">
+      <img src="cimarron-01.jpg" alt="Gunite pool and spa with a covered patio beyond">
+      <img src="cimarron-02.jpg" alt="Pool and spa with fountains beside a covered patio">
+      <img src="dovetail-29.webp" alt="Pool and deck with the house beyond">
+      <img src="dovetail-30.webp" alt="Pool with loungers and umbrella looking out to the lawn">
+    </div>
+    <div data-cat="cabinetry" data-label="Custom Cabinetry">
+      <img src="dovetail-20.webp" alt="Wine room with stone walls and custom racking">
+      <img src="dovetail-18.webp" alt="Butler's pantry with built-in cabinetry and counter space">
+      <img src="dovetail-19.webp" alt="Walk-in pantry with custom white shelving">
+    </div>
+    <div data-cat="flooring" data-label="Flooring"></div>
+    <div data-cat="additions" data-label="Home Additions"></div>
+  </div>
+
+  <div class="clb" id="catgLb" hidden>
+    <button class="clb-x" id="catgLbX" type="button" aria-label="Close">✕</button>
+    <button class="clb-btn clb-prev" id="catgLbPrev" type="button" aria-label="Previous photo">←</button>
+    <img class="clb-img" id="catgLbImg" src="" alt="">
+    <button class="clb-btn clb-next" id="catgLbNext" type="button" aria-label="Next photo">→</button>
+    <span class="clb-cap" id="catgLbCap"></span>
+  </div>
+
   <section class="cta-band on-dark">
     <div class="wrap">
       <div>
@@ -207,5 +306,57 @@
   </div>
 </footer>
 <script src="site.js?v=32"></script>
+<script>
+/* Browse-by-category: build the boxes from #catgData and run the lightbox. */
+(function () {
+  var data = document.getElementById('catgData'), grid = document.getElementById('catgGrid');
+  if (!data || !grid) return;
+  var cats = [].slice.call(data.children).map(function (d) {
+    return {
+      label: d.getAttribute('data-label') || d.getAttribute('data-cat') || '',
+      imgs: [].slice.call(d.querySelectorAll('img')).map(function (im) {
+        return { src: im.getAttribute('src'), alt: im.getAttribute('alt') || '' };
+      })
+    };
+  });
+  cats.forEach(function (c) {
+    var has = c.imgs.length;
+    var box = document.createElement(has ? 'button' : 'div');
+    box.className = 'catg' + (has ? '' : ' empty');
+    if (has) box.type = 'button';
+    var cover = has
+      ? '<img class="catg-img" src="' + c.imgs[0].src + '" alt="" loading="lazy">'
+      : '<span class="catg-ph"></span>';
+    var count = has ? (c.imgs.length + (c.imgs.length === 1 ? ' photo' : ' photos')) : 'Photos coming soon';
+    var view = has ? '<span class="catg-view">View all →</span>' : '';
+    box.innerHTML = cover + view +
+      '<span class="catg-bar"><span class="catg-name">' + c.label + '</span>' +
+      '<span class="catg-count">' + count + '</span></span>';
+    if (has) box.addEventListener('click', function () { openLb(c); });
+    grid.appendChild(box);
+  });
+
+  var lb = document.getElementById('catgLb'), img = document.getElementById('catgLbImg'),
+      cap = document.getElementById('catgLbCap');
+  var cur = null, i = 0;
+  function show(n) {
+    i = (n + cur.imgs.length) % cur.imgs.length;
+    img.src = cur.imgs[i].src; img.alt = cur.imgs[i].alt;
+    cap.textContent = cur.label + ' — ' + (i + 1) + ' / ' + cur.imgs.length;
+  }
+  function openLb(c) { cur = c; show(0); lb.hidden = false; document.body.style.overflow = 'hidden'; }
+  function close() { lb.hidden = true; document.body.style.overflow = ''; }
+  document.getElementById('catgLbX').addEventListener('click', close);
+  document.getElementById('catgLbPrev').addEventListener('click', function () { show(i - 1); });
+  document.getElementById('catgLbNext').addEventListener('click', function () { show(i + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(i - 1);
+    if (e.key === 'ArrowRight') show(i + 1);
+  });
+})();
+</script>
 </body>
 </html>
