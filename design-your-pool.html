@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Design Your Pool — Instant Rough Estimate | Fortis Construction Group, Austin TX</title>
-<meta name="description" content="Build your dream pool step by step — style, size, spa, plaster color, tile, and add-ons — and get an instant rough estimate from Fortis Construction Group in Austin, TX.">
+<title>Design Your Pool — Guide &amp; Pool Builder | Fortis Construction Group, Austin TX</title>
+<meta name="description" content="Two ways to start designing your pool with Fortis Construction Group: browse the Pool Design Guide, or jump into the Pool Builder for an instant rough estimate.">
 <link rel="canonical" href="https://www.fortistexas.com/design-your-pool.html">
 <meta property="og:site_name" content="Fortis Construction Group">
-<meta property="og:title" content="Design Your Pool — Instant Rough Estimate | Fortis Construction Group, Austin TX">
-<meta property="og:description" content="Build your dream pool step by step — style, size, spa, plaster color, tile, and add-ons — and get an instant rough estimate from Fortis Construction Group in Austin, TX.">
+<meta property="og:title" content="Design Your Pool — Guide &amp; Pool Builder | Fortis Construction Group, Austin TX">
+<meta property="og:description" content="Two ways to start designing your pool with Fortis Construction Group: browse the Pool Design Guide, or jump into the Pool Builder for an instant rough estimate.">
 <meta property="og:url" content="https://www.fortistexas.com/design-your-pool.html">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap">
-<link rel="stylesheet" href="styles.css?v=40">
+<link rel="stylesheet" href="styles.css?v=41">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -34,68 +34,6 @@
  ]
 }
 </script>
-<style>
-/* ---------- design-your-pool estimator (page-specific) ---------- */
-.dyp{background:var(--paper)}
-.dyp-layout{display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start;margin-top:2.5rem}
-@media(max-width:860px){.dyp-layout{grid-template-columns:1fr}}
-.dyp-card{position:sticky;top:92px;background:#fff;border:1px solid var(--gold);padding:1.6rem 1.5rem}
-@media(max-width:860px){.dyp-card{position:static}}
-.dyp-card h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 1rem}
-.dyp-picks{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:0 0 1.3rem}
-.dyp-picks li{font-size:.86rem;color:var(--ink-soft)}
-.dyp-picks .lbl{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.dyp-picks b{color:var(--navy);font-weight:600}
-.dyp-est{border:1px solid var(--rule);background:var(--paper);padding:1rem 1.1rem;margin-bottom:1.1rem}
-.dyp-est .lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
-.dyp-est .amt{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4vw,2.7rem);color:var(--gold-bright);line-height:1.1}
-.dyp-prog{height:5px;background:var(--rule);position:relative}
-.dyp-prog i{position:absolute;left:0;top:0;bottom:0;background:var(--gold-bright);transition:width .3s ease}
-.dyp-note{font-size:.7rem;font-style:italic;color:var(--ink-soft);margin-top:.9rem;line-height:1.5}
-.dyp-step h3{font-size:clamp(1.6rem,3.2vw,2.4rem);margin:0 0 .5rem}
-.dyp-step>.stepno{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
-.dyp-step .lede{margin-bottom:1.4rem;font-size:.98rem}
-.opt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.8rem}
-.opt{cursor:pointer;text-align:left;background:#fff;border:1px solid var(--rule);padding:1rem 1.05rem;font-family:var(--body);transition:border-color .15s ease,background .15s ease}
-.opt:hover{border-color:var(--gold)}
-.opt.sel{background:var(--navy);border-color:var(--navy)}
-.opt h4{font-weight:700;font-size:.98rem;color:var(--navy);margin:0 0 .2rem}
-.opt .sub{display:block;font-size:.76rem;color:var(--ink-soft);line-height:1.4}
-.opt .prc{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;color:var(--gold);margin-top:.45rem}
-.opt.sel h4{color:#fff}
-.opt.sel .sub{color:rgba(250,250,248,.7)}
-.opt.sel .prc{color:var(--gold-bright)}
-.opt .swatch{display:block;width:100%;aspect-ratio:16/6;border:1px solid rgba(23,27,23,.12);margin-bottom:.55rem}
-.opt .tileph{display:block;width:100%;aspect-ratio:16/6;margin-bottom:.55rem;position:relative;background:repeating-linear-gradient(45deg,rgba(214,166,60,.10) 0,rgba(214,166,60,.10) 1px,transparent 1px,transparent 10px),linear-gradient(160deg,#274063,#141F38)}
-.opt .tileph span{position:absolute;left:.5rem;bottom:.35rem;font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,250,248,.55)}
-.dyp-nav{display:flex;align-items:center;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
-.dyp-restart{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;cursor:pointer;color:var(--ink-soft);padding:.5rem 0}
-.dyp-restart:hover{color:var(--gold)}
-.btn[disabled]{opacity:.35;pointer-events:none}
-.dyp-summary ul.sum{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin:1rem 0 1.4rem}
-.dyp-summary ul.sum li{padding-left:1.4rem;position:relative;font-size:.92rem;color:var(--ink)}
-.dyp-summary ul.sum li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
-.dyp-incl{background:#fff;border:1px solid var(--rule);border-left:3px solid var(--gold);padding:1rem 1.2rem;margin:1.2rem 0 1.6rem}
-.dyp-incl h4{font-weight:700;font-size:.95rem;color:var(--navy);margin:0 0 .5rem}
-.dyp-incl ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
-.dyp-incl li{font-size:.82rem;color:var(--ink-soft);padding-left:1rem;position:relative}
-.dyp-incl li::before{content:"";position:absolute;left:0;top:.6em;width:.45rem;height:1px;background:var(--gold)}
-.dyp-disc{font-size:.76rem;font-style:italic;color:var(--ink-soft);line-height:1.55;margin-top:1.2rem}
-.dyp-ack{display:flex;gap:.6rem;align-items:flex-start;font-size:.88rem;color:var(--ink);line-height:1.45;cursor:pointer}
-.dyp-ack input{margin-top:.2rem;width:1.05rem;height:1.05rem;accent-color:var(--gold-bright);flex:none}
-/* --- inline sketch art on the option cards (no external assets) --- */
-.opt .sk{display:block;width:100%;aspect-ratio:2/1;margin-bottom:.6rem;color:var(--navy);opacity:.85;transition:opacity .15s ease,color .15s ease}
-.opt:hover .sk{opacity:1}
-.opt.sel .sk{color:var(--gold-bright);opacity:1}
-.opt .sk-fin{aspect-ratio:120/34}
-.opt .sk svg,.opt .tilesk svg,.opt .icn svg{width:100%;height:100%;display:block}
-.opt .icn{display:block;width:38px;height:38px;margin-bottom:.55rem;color:var(--gold);transition:color .15s ease}
-.opt.sel .icn{color:var(--gold-bright)}
-.opt .tilesk{display:block;width:100%;aspect-ratio:16/6;margin-bottom:.55rem;border:1px solid rgba(23,27,23,.12);overflow:hidden}
-.opt .swatch{position:relative;overflow:hidden}
-.opt .swatch svg{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:overlay;opacity:.9}
-@media (prefers-reduced-motion:reduce){.dyp-prog i{transition:none}.opt .sk,.opt .icn{transition:none}}
-</style>
 </head>
 <body>
 
@@ -111,14 +49,19 @@
             <li><a href="index.html">Home</a></li>
             <li><span class="menu-head">Services</span>
               <ul class="menu-sub">
-                <li><a href="interior-remodels.html">Interior Remodels</a></li>
-                <li><a href="outdoor-living.html">Outdoor Living</a></li>
-                <li><a href="pools.html">Pools</a>
+                <li><span class="menu-head">Residential</span>
                   <ul class="menu-sub2">
-                    <li><a href="pool-design-guide.html">Pool Design Guide</a></li>
+                    <li><a href="interior-remodels.html">Interior</a></li>
+                    <li><a href="outdoor-living.html">Exterior</a></li>
+                  </ul>
+                </li>
+                <li><a href="commercial-construction.html">Commercial</a></li>
+                <li><a href="pools.html">Pools by Fortis</a>
+                  <ul class="menu-sub2">
                     <li><a href="design-your-pool.html" aria-current="page">Design Your Pool</a></li>
                   </ul>
                 </li>
+                <li><a href="fortis-haus.html">Fortis Haus</a></li>
                 <li><a href="home-additions-sunrooms.html">Home Additions &amp; Sunrooms</a></li>
                 <li><a href="new-construction.html">New Construction</a></li>
               </ul>
@@ -141,27 +84,26 @@
     <div class="wrap">
       <p class="kicker">Pools</p>
       <h1>Design your pool</h1>
-      <p class="lede">Pick your style, size, finishes, and extras — your rough estimate builds itself as you go. Send us the result and we'll make it real.</p>
+      <p class="lede">Two ways to get started — browse ideas at your own pace, or jump straight to a rough estimate.</p>
     </div>
   </section>
 
-  <section class="dyp">
+  <section>
     <div class="wrap">
-      <div class="dyp-layout">
-
-        <aside class="dyp-card" aria-live="polite">
-          <h2 id="dypTitle">Your Dream Build</h2>
-          <ul class="dyp-picks" id="dypPicks"></ul>
-          <div class="dyp-est">
-            <span class="lbl">Pool estimate</span>
-            <div class="amt" id="dypAmt">$ ---</div>
-          </div>
-          <div class="dyp-prog"><i id="dypProg" style="width:0%"></i></div>
-          <p class="dyp-note">A rough planning estimate — not a bid. Your final price is confirmed at a free on-site consultation.</p>
-        </aside>
-
-        <div id="dypStep" class="dyp-step"></div>
-
+      <p class="eyebrow">Get started</p>
+      <h2>Where would you like to begin?</h2>
+      <p class="lede">Not sure yet what you want? Start with the Design Guide. Already have a shape and features in mind? Go straight to the Pool Builder for a rough number.</p>
+      <div class="tile-grid tile-grid-2">
+        <a class="tile reveal" href="pool-design-guide.html">
+          <span class="tile-ph"></span>
+          <span class="tile-corner" aria-hidden="true"></span>
+          <span class="tile-label">Pool Design Guide</span>
+        </a>
+        <a class="tile reveal" href="pool-builder.html">
+          <span class="tile-ph"></span>
+          <span class="tile-corner" aria-hidden="true"></span>
+          <span class="tile-label">Pool Builder</span>
+        </a>
       </div>
     </div>
   </section>
@@ -169,10 +111,10 @@
   <section class="cta-band on-dark">
     <div class="wrap">
       <div>
-        <h2>Rather flip through ideas first?</h2>
-        <p>The Pool Design Guide walks every choice with pictures.</p>
+        <h2>Ready to talk it through instead?</h2>
+        <p>Consultations are always free — no cost, no pressure.</p>
       </div>
-      <a class="btn btn-gold" href="pool-design-guide.html">Open the design guide</a>
+      <a class="btn btn-gold" href="contact.html">Get a free consultation</a>
     </div>
   </section>
 </main>
@@ -211,367 +153,5 @@
   </div>
 </footer>
 <script src="site.js?v=32"></script>
-<script>
-/* ============================================================
-   DESIGN-YOUR-POOL ESTIMATOR
-   >>> PRICING: EDIT THIS TABLE — these are PLACEHOLDER numbers.
-   All amounts are dollars added to the running total.
-   ============================================================ */
-var PRICING = {
-  style: { geometric: 78000, freeform: 82000, custom: 90000 },
-  size:  { petite: 0, classic: 12000, grand: 26000, imperial: 45000 },
-  spa:   { yes: 18000, no: 0 },
-  finish:{ tier1: 0, quartz: 4500, pebble: 8500 },
-  tile:  { classic: 0, porcelain: 1800, stone: 2600, glass: 3800, iridescent: 5200 },
-  addons:{ fountain: 4500, tree: 2500, uv: 1800, salt: 2600, heater: 6500, autofill: 1600, chiller: 7500, robot: 1800 }
-};
-
-var DATA = {
-  style: [
-    { k:'geometric', name:'Geometric', sub:'Clean lines and crisp corners that mirror the house.' },
-    { k:'freeform',  name:'Modern Freeform', sub:'Soft curves that flow with the landscape.' },
-    { k:'custom',    name:'Completely Custom', sub:'Professionally designed — vanishing edges, ledges, one-of-a-kind shapes.', from:true }
-  ],
-  size: [
-    { k:'petite',   name:'Petite',   sub:'~ 10 × 20 ft — plunge and cocktail pools.' },
-    { k:'classic',  name:'Classic',  sub:'~ 14 × 28 ft — the family standard.' },
-    { k:'grand',    name:'Grand',    sub:'~ 16 × 36 ft — swim laps, host crowds.' },
-    { k:'imperial', name:'Imperial', sub:'18 × 40 ft + — the estate pool.' }
-  ],
-  spa: [
-    { k:'yes', name:'Add a spa', sub:'Therapy jets, bench seating, fast independent heat.' },
-    { k:'no',  name:'No spa',   sub:'Keep it simple — you can always add one later.' }
-  ],
-  color: [
-    { k:'white',   name:'Pure White',     hex:'#EDEDE6', sub:'Bright azure water' },
-    { k:'ivory',   name:'Ivory',          hex:'#E3DCC9', sub:'Warm tropical blue' },
-    { k:'coolgrey',name:'Cool Grey',      hex:'#BFC3C4', sub:'Crisp light blue' },
-    { k:'french',  name:'French Grey',    hex:'#8E9494', sub:'Deep sky blue' },
-    { k:'graphite',name:'Graphite',       hex:'#5A6268', sub:'Lagoon blue' },
-    { k:'aqua',    name:'Caribbean Aqua', hex:'#77B5B2', sub:'Turquoise' },
-    { k:'tahoe',   name:'Tahoe Blue',     hex:'#41586E', sub:'Sapphire' },
-    { k:'midnight',name:'Midnight',       hex:'#23282D', sub:'Reflective lake' }
-  ],
-  finish: [
-    { k:'tier1',  name:'Tier 1 Plaster', sub:'Smooth classic plaster — included.' },
-    { k:'quartz', name:'Quartz',         sub:'Quartz aggregate — richer color, longer life.' },
-    { k:'pebble', name:'Pebble',         sub:'Pebble finish — the most durable and dimensional.' }
-  ],
-  tile: [
-    { k:'classic',    name:'Classic 6×6',      sub:'Clean, timeless waterline — included.' },
-    { k:'porcelain',  name:'Porcelain',        sub:'Durable with a modern, matte look.' },
-    { k:'stone',      name:'Stone-Look',       sub:'Organic texture that suits hill-country yards.' },
-    { k:'glass',      name:'Glass Mosaic',     sub:'Depth and sparkle at the waterline.' },
-    { k:'iridescent', name:'Iridescent Glass', sub:'Shifts color with the light — the showstopper.' }
-  ],
-  addons: [
-    { k:'fountain', name:'Fountain &amp; water features', sub:'Sheer descents, bubblers, deck jets.' },
-    { k:'tree',     name:'Tree protection', sub:'Root barriers and careful placement.' },
-    { k:'uv',       name:'UV sanitation',  sub:'Extra clean, fewer chemicals.' },
-    { k:'salt',     name:'Salt water system', sub:'Softer on skin and eyes.' },
-    { k:'heater',   name:'Heater', sub:'Swim spring through Thanksgiving.' },
-    { k:'autofill', name:'Auto-fill', sub:'Tops itself off, no hose.' },
-    { k:'chiller',  name:'Chiller', sub:'Refreshing water in August.' },
-    { k:'robot',    name:'Robotic cleaner', sub:'Scrubbed while you\'re at work.' }
-  ]
-};
-
-/* ============================================================
-   SKETCH ART — hand-drawn-feel inline SVG for every option.
-   All line art inherits currentColor, so it flips to gold
-   automatically when a card is selected (see .opt.sel .sk).
-   No external files: everything below is drawn in the browser.
-   ============================================================ */
-var LINE = 'xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"';
-
-var SK = {
-  /* ripple overlay that sits on top of each plaster colour swatch */
-  ripple:'<svg viewBox="0 0 120 45" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round">'+
-    '<path d="M8 15c8-4 14 4 22 0s14 4 22 0 14 4 22 0 14 4 22 0"/>'+
-    '<path d="M8 26c8-4 14 4 22 0s14 4 22 0 14 4 22 0 14 4 22 0" opacity=".65"/>'+
-    '<path d="M8 36c8-4 14 4 22 0s14 4 22 0 14 4 22 0 14 4 22 0" opacity=".4"/></svg>',
-
-  style: {
-    geometric:'<svg viewBox="0 0 120 60" '+LINE+'>'+
-      '<rect x="13" y="9" width="94" height="42"/>'+
-      '<rect x="19" y="15" width="82" height="30" opacity=".45"/>'+
-      '<path d="M26 27c5-3 9 3 14 0s9 3 14 0 9 3 14 0 9 3 14 0" opacity=".75"/>'+
-      '<path d="M26 36c5-3 9 3 14 0s9 3 14 0 9 3 14 0 9 3 14 0" opacity=".45"/></svg>',
-    freeform:'<svg viewBox="0 0 120 60" '+LINE+'>'+
-      '<path d="M18 32c0-13 15-21 32-18 13 2 19 10 32 10 11 0 18 5 18 12 0 10-14 16-29 16-17 0-24-5-37-7-11-2-16-6-16-13Z"/>'+
-      '<path d="M26 32c0-9 12-15 26-13 11 2 16 8 27 8 8 0 13 4 13 9 0 7-11 12-23 12-14 0-20-4-31-6-8-2-12-4-12-10Z" opacity=".45"/>'+
-      '<path d="M36 33c4-2.5 7 2.5 11 0s7 2.5 11 0 7 2.5 11 0" opacity=".7"/></svg>',
-    custom:'<svg viewBox="0 0 120 60" '+LINE+'>'+
-      '<path d="M22 36c0-12 14-20 30-17 12 2 18 9 30 9 10 0 17 5 17 11 0 9-13 15-27 15-16 0-23-5-35-7-9-2-15-5-15-11Z" stroke-dasharray="5 4" opacity=".8"/>'+
-      '<path d="M88 10l9 9-23 23-11 2 2-11 23-23Z"/>'+
-      '<path d="M85 13l9 9" opacity=".55"/>'+
-      '<path d="M25 12l2.6 5.8L33 20l-5.4 2.2L25 28l-2.6-5.8L17 20l5.4-2.2L25 12Z" opacity=".7"/></svg>'
-  },
-
-  /* relative footprints drawn inside one constant dashed yard */
-  size:(function(){
-    function yard(x,y,w,h){
-      return '<svg viewBox="0 0 120 60" '+LINE+'>'+
-        '<rect x="5" y="5" width="110" height="50" stroke-dasharray="4 4" opacity=".3"/>'+
-        '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'"/>'+
-        '<path d="M'+(x+7)+' '+(y+h/2)+'c4-2.5 7 2.5 11 0s7 2.5 11 0" opacity=".55"/></svg>';
-    }
-    return { petite:yard(40,21,40,18), classic:yard(33,18,54,24), grand:yard(25,15,70,30), imperial:yard(15,11,90,38) };
-  })(),
-
-  spa: {
-    yes:'<svg viewBox="0 0 120 60" '+LINE+'>'+
-      '<rect x="9" y="20" width="65" height="30"/>'+
-      '<path d="M17 35c5-3 9 3 14 0s9 3 14 0 9 3 14 0" opacity=".55"/>'+
-      '<rect x="79" y="20" width="31" height="22"/>'+
-      '<circle cx="87" cy="31" r="1.7" opacity=".85"/><circle cx="94.5" cy="31" r="1.7" opacity=".85"/><circle cx="102" cy="31" r="1.7" opacity=".85"/>'+
-      '<path d="M87 15c0-3.5 4.5-3.5 4.5-7M98 15c0-3.5 4.5-3.5 4.5-7" opacity=".6"/></svg>',
-    no:'<svg viewBox="0 0 120 60" '+LINE+'>'+
-      '<rect x="14" y="16" width="92" height="32"/>'+
-      '<path d="M24 28c6-3 10 3 16 0s10 3 16 0 10 3 16 0 10 3 16 0" opacity=".7"/>'+
-      '<path d="M24 38c6-3 10 3 16 0s10 3 16 0 10 3 16 0 10 3 16 0" opacity=".45"/></svg>'
-  },
-
-  finish:(function(){
-    /* seeded pseudo-random scatter — deterministic, but avoids the
-       visible lattice you get from plain modular spacing */
-    function speckle(count,radii,seed){
-      var s='', v=seed;
-      function rnd(){ v=(v*1103515245+12345)%2147483648; return v/2147483648; }
-      for(var i=0;i<count;i++){
-        var x=(7+rnd()*106).toFixed(1), y=(8+rnd()*18).toFixed(1), r=radii[i%radii.length];
-        s+='<circle cx="'+x+'" cy="'+y+'" r="'+r+'" opacity=".6"/>';
-      }
-      return s;
-    }
-    var box='<rect x="4" y="4" width="112" height="26" opacity=".4"/>';
-    return {
-      tier1:'<svg viewBox="0 0 120 34" '+LINE+'>'+box+'<path d="M14 22c14-8 30-10 46-6M62 13c14-4 28-3 42 2" opacity=".5"/></svg>',
-      quartz:'<svg viewBox="0 0 120 34" '+LINE+'>'+box+speckle(60,[1,1.3,.85,1.15],7919)+'</svg>',
-      pebble:'<svg viewBox="0 0 120 34" '+LINE+'>'+box+speckle(26,[2.6,3.4,2.2,3,2.8],104729)+'</svg>'
-    };
-  })(),
-
-  /* waterline tile mock-ups — our own artwork, not AquaTiles photography */
-  tile:(function(){
-    function grid(cols,rows,palette,round,bg){
-      var g=2, cw=(160-g*(cols+1))/cols, ch=(60-g*(rows+1))/rows, s='';
-      for(var r=0;r<rows;r++) for(var c=0;c<cols;c++){
-        s+='<rect x="'+(g+c*(cw+g)).toFixed(1)+'" y="'+(g+r*(ch+g)).toFixed(1)+'" width="'+cw.toFixed(1)+
-           '" height="'+ch.toFixed(1)+'" rx="'+(round||0)+'" fill="'+palette[(c+r*2)%palette.length]+'"/>';
-      }
-      return '<svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="60" fill="'+(bg||'#0E1B33')+'"/>'+s+'</svg>';
-    }
-    var irid='<svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg"><defs>'+
-      '<linearGradient id="dypIrid" x1="0" y1="0" x2="1" y2="1">'+
-      '<stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/>'+
-      '<stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient></defs>'+
-      '<rect width="160" height="60" fill="#101B2E"/>';
-    (function(){
-      var cols=12, rows=4, g=2, cw=(160-g*(cols+1))/cols, ch=(60-g*(rows+1))/rows;
-      var hues=['#7E5AA8','#4A7FC1','#39A0A8','#5FC0A0','#C08BB8','#4C63B6'];
-      for(var r=0;r<rows;r++) for(var c=0;c<cols;c++){
-        irid+='<rect x="'+(g+c*(cw+g)).toFixed(1)+'" y="'+(g+r*(ch+g)).toFixed(1)+'" width="'+cw.toFixed(1)+
-              '" height="'+ch.toFixed(1)+'" rx="1" fill="'+hues[(c+r*2)%hues.length]+'"/>';
-      }
-      irid+='<rect width="160" height="60" fill="url(#dypIrid)"/></svg>';
-    })();
-    return {
-      classic:    grid(8,3,['#2E6E93','#357CA3','#296084','#3E8AAF','#2B6B90']),
-      porcelain:  grid(4,2,['#5C6B72','#68767D','#54636A','#617077']),
-      stone:      grid(6,3,['#8A8577','#7C7768','#948E7E','#6F6A5C','#8E8878'],0,'#241F19'),
-      glass:      grid(12,4,['#1F7A8C','#2A94A6','#166B7D','#35A7B8','#1B8195'],1),
-      iridescent: irid
-    };
-  })(),
-
-  addons: {
-    fountain:'<svg viewBox="0 0 32 32" '+LINE+'><path d="M3.5 28.5h25"/>'+
-      '<path d="M6 28.5c0-3 4.5-4.6 10-4.6s10 1.6 10 4.6"/>'+
-      '<path d="M16 23.9V19.5"/><path d="M10 19.5c0-2 2.7-3.1 6-3.1s6 1.1 6 3.1"/>'+
-      '<path d="M16 16.4v-4.6"/>'+
-      '<path d="M16 11.8c-2.6 1-4.2 3-4.8 5.2M16 11.8c2.6 1 4.2 3 4.8 5.2"/></svg>',
-    tree:'<svg viewBox="0 0 32 32" '+LINE+'><circle cx="16" cy="10.5" r="5.4"/>'+
-      '<circle cx="10.6" cy="14" r="3.7"/><circle cx="21.4" cy="14" r="3.7"/>'+
-      '<path d="M16 27v-9"/><path d="M5.5 27h21" stroke-dasharray="2 2" opacity=".85"/></svg>',
-    uv:'<svg viewBox="0 0 32 32" '+LINE+'><rect x="11" y="5" width="10" height="15" rx="5"/>'+
-      '<path d="M16 20v7M9 8 5 6M9 15l-4 2M23 8l4-2M23 15l4 2"/></svg>',
-    salt:'<svg viewBox="0 0 32 32" '+LINE+'><path d="M3 22c4-3 6 3 10 0s6 3 10 0 5 2 6 1"/>'+
-      '<path d="M10 11l3.2-5.5L16.4 11l-3.2 5.5L10 11Z"/><path d="M20 9l2.6-4.5L25.2 9l-2.6 4.5L20 9Z" opacity=".75"/></svg>',
-    heater:'<svg viewBox="0 0 32 32" '+LINE+'><path d="M16 2.5c3.8 6.2 7 8.2 7 13a7 7 0 0 1-14 0c0-4.8 3.2-6.8 7-13Z"/>'+
-      '<path d="M16 22c-1.9 0-3.1-1.4-3.1-3.1 0-1.8 3.1-4.1 3.1-4.1s3.1 2.3 3.1 4.1c0 1.7-1.2 3.1-3.1 3.1Z" opacity=".5"/>'+
-      '<path d="M7 28c2.2-1.7 4.3-1.7 6.5 0s4.3 1.7 6.5 0 3.3-.8 5 0" opacity=".55"/></svg>',
-    autofill:'<svg viewBox="0 0 32 32" '+LINE+'><path d="M5 7h11v6"/><path d="M5 4v6"/>'+
-      '<path d="M20 20.5c0 2.8-2 5-4.5 5s-4.5-2.2-4.5-5c0-2.6 4.5-7.5 4.5-7.5s4.5 4.9 4.5 7.5Z"/>'+
-      '<path d="M24 27h5M24 23h5" opacity=".5"/></svg>',
-    chiller:'<svg viewBox="0 0 32 32" '+LINE+'><path d="M16 3v26M5 9.5l22 13M27 9.5l-22 13"/>'+
-      '<path d="M16 8.5l-3.2-3.2M16 8.5l3.2-3.2M16 23.5l-3.2 3.2M16 23.5l3.2 3.2" opacity=".75"/></svg>',
-    robot:'<svg viewBox="0 0 32 32" '+LINE+'><rect x="4" y="12" width="24" height="12" rx="3.5"/>'+
-      '<path d="M10 12V9.5A3.5 3.5 0 0 1 13.5 6h5A3.5 3.5 0 0 1 22 9.5V12"/>'+
-      '<circle cx="11" cy="18" r="1.7"/><circle cx="21" cy="18" r="1.7"/>'+
-      '<path d="M9 24v3M23 24v3" opacity=".55"/></svg>'
-  }
-};
-
-(function () {
-  var state = { style:null, size:null, spa:null, color:'white', finish:'tier1', tile:'classic', addons:[] };
-  var stepEl = document.getElementById('dypStep');
-  var picksEl = document.getElementById('dypPicks');
-  var amtEl = document.getElementById('dypAmt');
-  var progEl = document.getElementById('dypProg');
-  var step = 0;
-  var customStep = false;
-  var STEPS = ['style','size','spa','finish','tile','addons','summary'];
-  var TITLES = {
-    style:['Step 1: Choose your style','Three ways to shape the water — pick the one that fits your home.'],
-    size:['Step 2: Pick a size','Typical starting footprints — every pool is sized to your yard on site.'],
-    spa:['Step 3: Add a spa','The most-requested upgrade we build.'],
-    finish:['Step 4: Plaster color &amp; finish','Your plaster sets the color of the water itself. Pick a color, then a finish tier.'],
-    tile:['Step 5: Waterline tile','Sourced through our partners at AquaTiles — samples in hand at your consultation.'],
-    addons:['Step 6: Choose your add-ons','Select as many as you like — the estimate updates as you go.'],
-    summary:['Your dream build','Here\'s the pool you designed. Send it to us and we\'ll take it from here.']
-  };
-  function money(n){ return '$' + n.toLocaleString('en-US'); }
-  function price(){
-    if (!state.style) return null;
-    var t = PRICING.style[state.style];
-    if (state.size) t += PRICING.size[state.size];
-    if (state.spa)  t += PRICING.spa[state.spa];
-    t += PRICING.finish[state.finish];
-    t += PRICING.tile[state.tile];
-    state.addons.forEach(function(k){ t += PRICING.addons[k]; });
-    return t;
-  }
-  function label(group, k){
-    var it = DATA[group].filter(function(o){return o.k===k;})[0];
-    return it ? it.name : null;
-  }
-  function pickRows(){
-    var rows = [];
-    if (state.style) rows.push(['Pool style', label('style',state.style)]);
-    if (state.size)  rows.push(['Pool size', label('size',state.size)]);
-    if (state.spa)   rows.push(['Spa', state.spa==='yes'?'Spa':'No spa']);
-    if (step >= 3)   rows.push(['Finish', label('color',state.color) + ' · ' + label('finish',state.finish)]);
-    if (step >= 4)   rows.push(['Waterline tile', label('tile',state.tile)]);
-    if (step >= 5 && state.addons.length) rows.push(['Add-ons', state.addons.map(function(k){return label('addons',k);}).join(', ')]);
-    return rows;
-  }
-  function renderCard(){
-    picksEl.innerHTML = pickRows().map(function(r){
-      return '<li><span class="lbl">'+r[0]+'</span><b>'+r[1]+'</b></li>';
-    }).join('') || '<li><span class="lbl">Selections</span><b>Start with a style →</b></li>';
-    var p = price();
-    amtEl.textContent = p === null ? '$ ---' : (state.style === 'custom' ? 'From ' + money(PRICING.style.custom) : money(p));
-    progEl.style.width = (customStep ? 100 : Math.round((step) / (STEPS.length-1) * 100)) + '%';
-  }
-  function priceTag(group,k){
-    var v = PRICING[group] ? PRICING[group][k] : 0;
-    if (group==='style') return (k==='custom'?'from ':'base ') + money(v);
-    return v === 0 ? 'Included' : '+ ' + money(v);
-  }
-  function nav(backOk, nextOk, nextLabel){
-    return '<div class="dyp-nav">'+
-      (backOk ? '<button type="button" class="btn btn-navy" id="dypBack">← Back</button>' : '')+
-      (nextLabel === null ? '' : '<button type="button" class="btn btn-gold" id="dypNext"'+(nextOk?'':' disabled')+'>'+(nextLabel||'Next →')+'</button>')+
-      '<button type="button" class="dyp-restart" id="dypRestart">Start over</button></div>';
-  }
-  function render(){
-    if (customStep){
-      var ch = '<p class="stepno">Custom build</p><h3>Let\'s design it together</h3>'+
-        '<p class="lede">A completely custom pool starts from a blank page — vanishing edges, swim-up bars, one-of-a-kind shapes — so it\'s priced from your yard and your vision, not a menu. Leave your details and we\'ll set up your free design consultation.</p>'+
-        '<form class="lead-form" action="https://formspree.io/f/mpqgewbv" method="POST" style="margin-top:0;max-width:34rem">'+
-        '<input type="hidden" name="_subject" value="Custom pool inquiry — fortistexas.com">'+
-        '<input type="hidden" name="dream_build" value="Pool style: Completely Custom — custom design consultation requested">'+
-        '<div class="form-row"><div class="field"><label for="c-name">Name</label><input id="c-name" type="text" name="name" autocomplete="name" placeholder="Your name" required></div>'+
-        '<div class="field"><label for="c-phone">Phone</label><input id="c-phone" type="tel" name="phone" autocomplete="tel" placeholder="(512) 000-0000" required></div></div>'+
-        '<div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required></div>'+
-        '<div class="field"><label for="c-address">Property address</label><input id="c-address" type="text" name="address" autocomplete="street-address" placeholder="Street, city" required></div>'+
-        '<label class="dyp-ack"><input type="checkbox" id="dypAck" required> <span>I understand fully custom pools start at '+money(PRICING.style.custom)+'.</span></label>'+
-        '<button class="btn btn-gold" type="submit" id="dypCustomSubmit" disabled>Request my custom consultation</button></form>'+
-        '<div class="dyp-nav"><button type="button" class="btn btn-navy" id="dypBack">← Back</button><button type="button" class="dyp-restart" id="dypRestart">Start over</button></div>';
-      stepEl.innerHTML = ch;
-      document.getElementById('dypBack').addEventListener('click', function(){ customStep = false; render(); renderCard(); scrollTop(); });
-      document.getElementById('dypRestart').addEventListener('click', resetAll);
-      var ack = document.getElementById('dypAck'), sub = document.getElementById('dypCustomSubmit');
-      ack.addEventListener('change', function(){ sub.disabled = !ack.checked; });
-      renderCard();
-      return;
-    }
-    var g = STEPS[step];
-    var h = '<p class="stepno">'+(step<6?('Step '+(step+1)+' of 6'):'Complete')+'</p><h3>'+TITLES[g][0]+'</h3><p class="lede">'+TITLES[g][1]+'</p>';
-    if (g==='style' || g==='size' || g==='spa'){
-      h += '<div class="opt-grid">'+DATA[g].map(function(o){
-        var art = (SK[g] && SK[g][o.k]) ? '<span class="sk">'+SK[g][o.k]+'</span>' : '';
-        return '<button type="button" class="opt'+(state[g]===o.k?' sel':'')+'" data-g="'+g+'" data-k="'+o.k+'">'+art+'<h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span><span class="prc">'+priceTag(g,o.k)+'</span></button>';
-      }).join('')+'</div>';
-      h += nav(step>0, !!state[g]);
-    } else if (g==='finish'){
-      h += '<div class="opt-grid" style="grid-template-columns:repeat(auto-fill,minmax(140px,1fr))">'+DATA.color.map(function(o){
-        return '<button type="button" class="opt'+(state.color===o.k?' sel':'')+'" data-g="color" data-k="'+o.k+'"><span class="swatch" style="background:'+o.hex+'">'+SK.ripple+'</span><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span></button>';
-      }).join('')+'</div>';
-      h += '<p class="lede" style="margin:1.4rem 0 .8rem"><b>Finish tier</b></p><div class="opt-grid">'+DATA.finish.map(function(o){
-        return '<button type="button" class="opt'+(state.finish===o.k?' sel':'')+'" data-g="finish" data-k="'+o.k+'"><span class="sk sk-fin">'+SK.finish[o.k]+'</span><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span><span class="prc">'+priceTag('finish',o.k)+'</span></button>';
-      }).join('')+'</div>';
-      h += nav(true, true);
-    } else if (g==='tile'){
-      h += '<div class="opt-grid">'+DATA.tile.map(function(o){
-        return '<button type="button" class="opt'+(state.tile===o.k?' sel':'')+'" data-g="tile" data-k="'+o.k+'"><span class="tilesk">'+SK.tile[o.k]+'</span><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span><span class="prc">'+priceTag('tile',o.k)+'</span></button>';
-      }).join('')+'</div>';
-      h += nav(true, true);
-    } else if (g==='addons'){
-      h += '<div class="opt-grid">'+DATA.addons.map(function(o){
-        var on = state.addons.indexOf(o.k) !== -1;
-        return '<button type="button" class="opt'+(on?' sel':'')+'" data-g="addons" data-k="'+o.k+'"><span class="icn">'+SK.addons[o.k]+'</span><h4>'+o.name+'</h4><span class="sub">'+o.sub+'</span><span class="prc">+ '+money(PRICING.addons[o.k])+'</span></button>';
-      }).join('')+'</div>';
-      h += nav(true, true, 'See my dream build →');
-    } else {
-      var p = price();
-      h += '<div class="dyp-summary"><ul class="sum">'+pickRows().map(function(r){return '<li><b>'+r[0]+':</b> '+r[1]+'</li>';}).join('')+'</ul>';
-      h += '<div class="dyp-est" style="max-width:20rem"><span class="lbl">Project estimate</span><div class="amt">'+money(p)+'</div></div>';
-      h += '<div class="dyp-incl"><h4>Included in every Fortis pool</h4><ul><li>Permits &amp; construction plans — we handle the paperwork</li><li>Steel-reinforced gunite shell</li><li>Pentair equipment with smart automation</li><li>Tier 1 plaster &amp; classic waterline tile baseline</li><li>Excavation to completion with phase-by-phase quality checks</li></ul></div>';
-      h += '<p class="lede" style="margin-bottom:.8rem"><b>Send us your dream build</b> — we\'ll review it and reach out to schedule your free on-site consultation.</p>';
-      h += '<form class="lead-form" action="https://formspree.io/f/mpqgewbv" method="POST" style="margin-top:0">'+
-        '<input type="hidden" name="_subject" value="New Dream Build pool estimate — fortistexas.com">'+
-        '<input type="hidden" name="dream_build" id="dypBuild">'+
-        '<div class="form-row"><div class="field"><label for="d-name">Name</label><input id="d-name" type="text" name="name" autocomplete="name" placeholder="Your name" required></div>'+
-        '<div class="field"><label for="d-phone">Phone</label><input id="d-phone" type="tel" name="phone" autocomplete="tel" placeholder="(512) 000-0000" required></div></div>'+
-        '<div class="field"><label for="d-email">Email</label><input id="d-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required></div>'+
-        '<div class="field"><label for="d-address">Property address</label><input id="d-address" type="text" name="address" autocomplete="street-address" placeholder="Street, city" required></div>'+
-        '<button class="btn btn-gold" type="submit">Send my dream build</button></form>';
-      h += '<p class="dyp-disc">NOTE: This is a rough planning estimate, not a bid or final price. Site conditions, access, utilities, and your final selections all affect cost — your exact number comes from a free on-site consultation.</p></div>';
-      h += nav(true, false, null);
-    }
-    stepEl.innerHTML = h;
-    var nx = document.getElementById('dypNext');
-    stepEl.querySelectorAll('.opt').forEach(function(b){
-      b.addEventListener('click', function(){
-        var gg = b.getAttribute('data-g'), k = b.getAttribute('data-k');
-        if (gg === 'addons'){
-          var ix = state.addons.indexOf(k);
-          if (ix === -1) state.addons.push(k); else state.addons.splice(ix,1);
-        } else { state[gg] = k; }
-        render(); renderCard();
-      });
-    });
-    if (nx) nx.addEventListener('click', function(){
-      if (STEPS[step] === 'style' && state.style === 'custom'){ customStep = true; }
-      else { step = Math.min(step+1, STEPS.length-1); }
-      render(); renderCard(); scrollTop();
-    });
-    var bk = document.getElementById('dypBack');
-    if (bk) bk.addEventListener('click', function(){ step = Math.max(step-1, 0); render(); renderCard(); scrollTop(); });
-    var rs = document.getElementById('dypRestart');
-    if (rs) rs.addEventListener('click', resetAll);
-    var form = stepEl.querySelector('form');
-    if (form) form.addEventListener('submit', function(){
-      document.getElementById('dypBuild').value = pickRows().map(function(r){return r[0]+': '+r[1];}).join(' | ') + ' | Estimate: ' + money(price());
-    });
-    renderCard();
-  }
-  function resetAll(){ state = { style:null,size:null,spa:null,color:'white',finish:'tier1',tile:'classic',addons:[] }; step = 0; customStep = false; render(); renderCard(); scrollTop(); }
-  function scrollTop(){ var y = stepEl.getBoundingClientRect().top + window.pageYOffset - 90; if (window.pageYOffset > y) window.scrollTo({top:y}); }
-  render();
-})();
-</script>
 </body>
 </html>
