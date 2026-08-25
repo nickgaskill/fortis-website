@@ -7,7 +7,7 @@ Skip a topic instead of forcing it if, once you look at the site, it turns out t
 ## Evergreen guides
 
 - [x] kitchen-remodel-cost-austin — How Much Does a Kitchen Remodel Cost in Austin? — cost *ranges* by scope (refresh vs. full gut), what drives the range up or down, no invented precise numbers; CTA to a free consultation for a real estimate (published 2026-08-25)
-- [ ] signs-you-need-a-bathroom-remodel — Signs It's Time for a Bathroom Remodel — practical checklist (grout/mold, dated fixtures, poor layout, resale), tie to bathroom-remodels.html
+- [x] signs-you-need-a-bathroom-remodel — Signs It's Time for a Bathroom Remodel — practical checklist (grout/mold, dated fixtures, poor layout, resale), tie to bathroom-remodels.html (published 2026-08-25)
 - [ ] pool-permitting-central-texas — Pool Permitting in Central Texas: What to Expect — general process/timeline framing (HOA review, setbacks, inspections), not city-specific legal claims; tie to pools.html
 - [ ] adu-vs-home-addition — ADU vs. Home Addition: Which Is Right for You? — compare casita/ADU vs. attached addition vs. sunroom; tie to home-additions-sunrooms.html
 - [ ] choosing-a-general-contractor-austin — How to Choose a General Contractor in Austin — what to vet (licensing, communication, one point of contact), tie to process.html
