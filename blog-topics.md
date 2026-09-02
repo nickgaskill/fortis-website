@@ -9,7 +9,7 @@ Skip a topic instead of forcing it if, once you look at the site, it turns out t
 - [x] kitchen-remodel-cost-austin — How Much Does a Kitchen Remodel Cost in Austin? — cost *ranges* by scope (refresh vs. full gut), what drives the range up or down, no invented precise numbers; CTA to a free consultation for a real estimate (published 2026-08-25)
 - [x] signs-you-need-a-bathroom-remodel — Signs It's Time for a Bathroom Remodel — practical checklist (grout/mold, dated fixtures, poor layout, resale), tie to bathroom-remodels.html (published 2026-08-25)
 - [x] pool-permitting-central-texas — Pool Permitting in Central Texas: What to Expect — general process/timeline framing (HOA review, setbacks, inspections), not city-specific legal claims; tie to pools.html (published 2026-09-02)
-- [ ] adu-vs-home-addition — ADU vs. Home Addition: Which Is Right for You? — compare casita/ADU vs. attached addition vs. sunroom; tie to home-additions-sunrooms.html
+- [x] adu-vs-home-addition — ADU vs. Home Addition: Which Is Right for You? — compare casita/ADU vs. attached addition vs. sunroom; tie to home-additions-sunrooms.html (published 2026-09-02)
 - [ ] choosing-a-general-contractor-austin — How to Choose a General Contractor in Austin — what to vet (licensing, communication, one point of contact), tie to process.html
 - [ ] interior-vs-exterior-remodel-first — Interior or Exterior First? Sequencing a Whole-Property Remodel — planning/budget-sequencing advice
 - [ ] whole-home-renovation-what-to-expect — What to Expect During a Whole-Home Renovation — phases, living-through-it logistics, tie to whole-home-renovations.html
