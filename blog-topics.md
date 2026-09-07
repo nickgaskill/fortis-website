@@ -10,7 +10,7 @@ Skip a topic instead of forcing it if, once you look at the site, it turns out t
 - [x] signs-you-need-a-bathroom-remodel — Signs It's Time for a Bathroom Remodel — practical checklist (grout/mold, dated fixtures, poor layout, resale), tie to bathroom-remodels.html (published 2026-08-25)
 - [x] pool-permitting-central-texas — Pool Permitting in Central Texas: What to Expect — general process/timeline framing (HOA review, setbacks, inspections), not city-specific legal claims; tie to pools.html (published 2026-09-02)
 - [x] adu-vs-home-addition — ADU vs. Home Addition: Which Is Right for You? — compare casita/ADU vs. attached addition vs. sunroom; tie to home-additions-sunrooms.html (published 2026-09-02)
-- [ ] choosing-a-general-contractor-austin — How to Choose a General Contractor in Austin — what to vet (licensing, communication, one point of contact), tie to process.html
+- [x] choosing-a-general-contractor-austin — How to Choose a General Contractor in Austin — what to vet (licensing, communication, one point of contact), tie to process.html (published 2026-09-07)
 - [ ] interior-vs-exterior-remodel-first — Interior or Exterior First? Sequencing a Whole-Property Remodel — planning/budget-sequencing advice
 - [ ] whole-home-renovation-what-to-expect — What to Expect During a Whole-Home Renovation — phases, living-through-it logistics, tie to whole-home-renovations.html
 - [ ] custom-cabinetry-101 — Custom Cabinetry 101: Materials, Styles & What They Cost to Change — tie to custom-cabinetry.html
