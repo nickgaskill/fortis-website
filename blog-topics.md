@@ -12,7 +12,7 @@ Skip a topic instead of forcing it if, once you look at the site, it turns out t
 - [x] adu-vs-home-addition — ADU vs. Home Addition: Which Is Right for You? — compare casita/ADU vs. attached addition vs. sunroom; tie to home-additions-sunrooms.html (published 2026-09-02)
 - [x] choosing-a-general-contractor-austin — How to Choose a General Contractor in Austin — what to vet (licensing, communication, one point of contact), tie to process.html (published 2026-09-07)
 - [x] interior-vs-exterior-remodel-first — Interior or Exterior First? Sequencing a Whole-Property Remodel — planning/budget-sequencing advice (published 2026-09-07)
-- [ ] whole-home-renovation-what-to-expect — What to Expect During a Whole-Home Renovation — phases, living-through-it logistics, tie to whole-home-renovations.html
+- [x] whole-home-renovation-what-to-expect — What to Expect During a Whole-Home Renovation — phases, living-through-it logistics, tie to whole-home-renovations.html (published 2026-09-09)
 - [ ] custom-cabinetry-101 — Custom Cabinetry 101: Materials, Styles & What They Cost to Change — tie to custom-cabinetry.html
 - [ ] hardscaping-for-texas-heat — Hardscaping Ideas That Hold Up in Texas Heat — material choices (avoid heat-retaining stone in bare-foot zones, shade planning), tie to hardscaping.html
 - [ ] sunroom-vs-casita — Sunroom vs. Casita: Comparing Your Home Addition Options — tie to sunrooms.html and casitas.html
